@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Legal, Disclaimers &amp; Privacy | Greenpoint AI Compliance LLC</title>
+<meta name="description" content="Legal notices, terms of use, independence statement and privacy policy for Greenpoint AI Compliance LLC. This site sets no cookies and runs no tracking.">
+<link rel="canonical" href="https://greenpointaicompliance.com/legal.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Legal, Disclaimers &amp; Privacy | Greenpoint AI Compliance LLC">
+<meta property="og:description" content="Legal notices, terms of use, independence statement and privacy policy.">
+<meta property="og:url" content="https://greenpointaicompliance.com/legal.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Cpath d=%27M0 0h32v25l-7 7H0z%27 fill=%27%231E2A62%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Greenpoint AI Compliance — shared stylesheet
+   Palette: cool ink + paper, institutional indigo,
+   audit-signal crimson/green. Deliberately not warm-cream.
+   Type: Archivo (display, tight) / Source Serif 4 (body)
+         / IBM Plex Mono (data + labels)
+   ============================================================ */
+
+:root {
+  --ink:      #0E1116;
+  --slate:    #4A5464;
+  --slate-lt: #737D8C;
+  --paper:    #FAFAFB;
+  --panel:    #F1F3F7;
+  --rule:     #E2E5EB;
+  --indigo:   #1E2A62;
+  --indigo-lt:#3A4B96;
+  --flag:     #A3162A;
+  --pass:     #17654A;
+
+  --maxw: 1140px;
+  --measure: 68ch;
+
+  --step--1: clamp(0.82rem, 0.79rem + 0.13vw, 0.89rem);
+  --step-0:  clamp(1rem, 0.96rem + 0.2vw, 1.09rem);
+  --step-1:  clamp(1.2rem, 1.12rem + 0.4vw, 1.45rem);
+  --step-2:  clamp(1.5rem, 1.34rem + 0.78vw, 2rem);
+  --step-3:  clamp(1.9rem, 1.6rem + 1.5vw, 2.9rem);
+  --step-4:  clamp(2.4rem, 1.85rem + 2.7vw, 4.3rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: var(--step-0);
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: Archivo, "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: -0.028em;
+  line-height: 1.06;
+  margin: 0;
+  font-weight: 700;
+}
+
+a { color: var(--indigo); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--indigo-lt); }
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--indigo);
+  outline-offset: 3px;
+}
+
+.wrap { max-width: var(--maxw); margin-inline: auto; padding-inline: 1.5rem; }
+
+/* ---------- eyebrow / label utility ---------- */
+.eyebrow {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--slate-lt);
+  margin: 0 0 0.9rem;
+  display: block;
+}
+
+/* ---------- header ---------- */
+.site-head {
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+  position: sticky; top: 0; z-index: 50;
+}
+.site-head .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1.5rem; padding-block: 1rem;
+}
+.brand {
+  font-family: Archivo, sans-serif; font-weight: 700; font-size: 1.02rem;
+  letter-spacing: -0.03em; color: var(--ink); text-decoration: none;
+  display: flex; align-items: center; gap: 0.55rem;
+}
+.brand .mark {
+  width: 22px; height: 22px; flex: none;
+  background: var(--indigo);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0 100%);
+}
+.site-nav { display: flex; gap: 1.6rem; align-items: center; }
+.site-nav a {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.76rem;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--slate); text-decoration: none;
+}
+.site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--ink); }
+.site-nav a[aria-current="page"] { border-bottom: 2px solid var(--indigo); padding-bottom: 2px; }
+@media (max-width: 720px) {
+  .site-nav { gap: 1rem; flex-wrap: wrap; justify-content: flex-end; }
+  .site-nav a { font-size: 0.68rem; }
+}
+
+/* ---------- hero ---------- */
+.hero { padding-block: clamp(3rem, 7vw, 6rem) clamp(2.5rem, 5vw, 4.5rem); }
+.hero-grid {
+  display: grid; gap: clamp(2.5rem, 5vw, 4rem);
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  align-items: start;
+}
+@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
+
+.hero h1 { font-size: var(--step-4); }
+.hero h1 em {
+  font-style: normal;
+  display: block;
+  color: var(--indigo);
+}
+.hero .lede {
+  font-size: var(--step-1); color: var(--slate);
+  max-width: 34ch; margin: 1.6rem 0 0; line-height: 1.45;
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2.2rem; }
+
+.btn {
+  font-family: Archivo, sans-serif; font-weight: 600; font-size: 0.9rem;
+  padding: 0.8rem 1.4rem; border-radius: 2px; text-decoration: none;
+  border: 1px solid var(--indigo); display: inline-block;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.btn-solid { background: var(--indigo); color: #fff; }
+.btn-solid:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+.btn-ghost { background: transparent; color: var(--indigo); }
+.btn-ghost:hover { background: var(--panel); color: var(--indigo); }
+
+/* ---------- signature: audit exhibit ---------- */
+.exhibit {
+  border: 1px solid var(--ink);
+  background: #fff;
+  box-shadow: 6px 6px 0 var(--panel);
+}
+.exhibit-head {
+  background: var(--ink); color: #fff;
+  padding: 0.7rem 1.1rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+  display: flex; justify-content: space-between; gap: 1rem;
+}
+.exhibit-head span:last-child { color: #9AA4B8; }
+.exhibit-body { padding: 1.1rem; }
+
+table.audit {
+  width: 100%; border-collapse: collapse;
+  font-family: "IBM Plex Mono", monospace; font-size: 0.78rem;
+}
+table.audit th {
+  text-align: left; font-weight: 600; color: var(--slate-lt);
+  font-size: 0.64rem; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0 0.5rem 0.55rem 0; border-bottom: 1px solid var(--rule);
+  white-space: nowrap;
+}
+table.audit th:not(:first-child), table.audit td:not(:first-child) { text-align: right; }
+table.audit td {
+  padding: 0.5rem 0.5rem 0.5rem 0; border-bottom: 1px solid var(--rule);
+  font-variant-numeric: tabular-nums;
+}
+table.audit tr:last-child td { border-bottom: none; }
+table.audit input {
+  width: 5.2rem; font: inherit; text-align: right;
+  border: 1px solid var(--rule); background: var(--paper);
+  padding: 0.25rem 0.4rem; border-radius: 2px; color: var(--ink);
+}
+table.audit input:hover { border-color: var(--slate-lt); }
+
+.ratio { font-weight: 600; }
+.verdict {
+  font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.16rem 0.44rem; border-radius: 2px; white-space: nowrap;
+}
+.verdict.fail { background: #F7E4E7; color: var(--flag); }
+.verdict.pass { background: #E2F0EA; color: var(--pass); }
+.exhibit-foot {
+  border-top: 1px solid var(--rule); padding: 0.85rem 1.1rem;
+  font-family: "IBM Plex Mono", monospace; font-size: 0.68rem;
+  color: var(--slate); line-height: 1.5;
+}
+.exhibit-foot strong { color: var(--ink); }
+
+/* ---------- generic sections ---------- */
+.section { padding-block: clamp(3rem, 6vw, 5.5rem); border-top: 1px solid var(--rule); }
+.section-title { font-size: var(--step-3); max-width: 20ch; }
+.section-intro { color: var(--slate); max-width: var(--measure); margin-top: 1.1rem; }
+
+/* obligations — a real ordered sequence, so numbering earns its place */
+.steps { list-style: none; padding: 0; margin: 2.8rem 0 0; display: grid; gap: 0; }
+.steps li {
+  display: grid; grid-template-columns: 4.5rem 1fr; gap: 1.5rem;
+  padding: 1.6rem 0; border-top: 1px solid var(--rule);
+}
+.steps li:last-child { border-bottom: 1px solid var(--rule); }
+.steps .num {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.72rem;
+  color: var(--indigo); letter-spacing: 0.1em; padding-top: 0.35rem;
+}
+.steps h3 { font-size: var(--step-1); margin-bottom: 0.5rem; }
+.steps p { margin: 0; color: var(--slate); max-width: var(--measure); }
+@media (max-width: 620px) {
+  .steps li { grid-template-columns: 1fr; gap: 0.5rem; }
+}
+
+/* cards */
+.cards { display: grid; gap: 1.25rem; margin-top: 2.8rem; grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 880px) { .cards { grid-template-columns: 1fr; } }
+.card {
+  border: 1px solid var(--rule); background: #fff; padding: 1.6rem;
+  display: flex; flex-direction: column;
+}
+.card h3 { font-size: var(--step-1); margin-bottom: 0.7rem; }
+.card p { color: var(--slate); margin: 0 0 1.2rem; font-size: 0.95rem; }
+.card .price {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.8rem;
+  color: var(--ink); border-top: 1px solid var(--rule);
+  padding-top: 0.9rem; margin-top: auto;
+}
+.card .price span { display: block; color: var(--slate-lt); font-size: 0.7rem; margin-top: 0.25rem; }
+
+/* callout */
+.callout {
+  border-left: 3px solid var(--indigo); background: var(--panel);
+  padding: 1.3rem 1.5rem; margin: 2rem 0; max-width: var(--measure);
+}
+.callout p { margin: 0; }
+.callout p + p { margin-top: 0.8rem; }
+
+/* prose (guide page) */
+.prose { max-width: var(--measure); }
+.prose h2 { font-size: var(--step-2); margin: 3rem 0 1rem; }
+.prose h3 { font-size: var(--step-1); margin: 2.2rem 0 0.7rem; }
+.prose p { margin: 0 0 1.1rem; }
+.prose ul, .prose ol { margin: 0 0 1.3rem; padding-left: 1.3rem; }
+.prose li { margin-bottom: 0.5rem; }
+.prose table {
+  width: 100%; border-collapse: collapse; margin: 1.5rem 0;
+  font-family: "IBM Plex Mono", monospace; font-size: 0.78rem;
+}
+.prose table th {
+  text-align: left; background: var(--panel); padding: 0.6rem 0.7rem;
+  font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase;
+  border: 1px solid var(--rule);
+}
+.prose table td { padding: 0.6rem 0.7rem; border: 1px solid var(--rule); }
+
+.toc {
+  border: 1px solid var(--rule); background: #fff;
+  padding: 1.3rem 1.5rem; margin: 2rem 0 2.5rem;
+}
+.toc p {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.68rem;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate-lt);
+  margin: 0 0 0.8rem;
+}
+.toc ol { margin: 0; padding-left: 1.2rem; }
+.toc li { margin-bottom: 0.35rem; font-size: 0.94rem; }
+
+/* page header for interior pages */
+.page-head { padding-block: clamp(2.8rem, 6vw, 4.5rem) 0; }
+.page-head h1 { font-size: var(--step-3); max-width: 22ch; }
+.page-head .lede { color: var(--slate); max-width: var(--measure); margin-top: 1.2rem; font-size: var(--step-1); line-height: 1.45; }
+.meta {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.7rem;
+  color: var(--slate-lt); margin-top: 1.5rem; letter-spacing: 0.04em;
+}
+
+/* CTA band */
+.cta-band { background: var(--ink); color: #fff; padding-block: clamp(3rem, 6vw, 4.5rem); }
+.cta-band h2 { font-size: var(--step-2); max-width: 20ch; color: #fff; }
+.cta-band p { color: #A9B2C4; max-width: 52ch; margin: 1.1rem 0 2rem; }
+.cta-band .btn-solid { background: #fff; color: var(--ink); border-color: #fff; }
+.cta-band .btn-solid:hover { background: var(--indigo-lt); border-color: var(--indigo-lt); color: #fff; }
+
+/* footer */
+.site-foot {
+  border-top: 1px solid var(--rule); padding-block: 2.5rem;
+  font-size: 0.85rem; color: var(--slate);
+}
+.site-foot .wrap { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between; }
+.site-foot a { color: var(--slate); }
+.site-foot .disclaimer { max-width: 46ch; font-size: 0.78rem; color: var(--slate-lt); }
+
+/* reveal */
+.reveal { opacity: 0; transform: translateY(12px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
+
+/* ============================================================
+   RESPONSIVE — mobile corrections
+   ============================================================ */
+
+/* Header: stack brand over nav, drop sticky (2 rows eats too much
+   viewport on a phone), tighten type. */
+@media (max-width: 660px) {
+  .site-head { position: static; }
+  .site-head .wrap {
+    flex-direction: column; align-items: flex-start;
+    gap: 0.7rem; padding-block: 0.85rem;
+  }
+  .brand { font-size: 0.95rem; }
+  .site-nav {
+    width: 100%; justify-content: flex-start;
+    gap: 1.15rem; flex-wrap: wrap;
+  }
+  .site-nav a { font-size: 0.66rem; letter-spacing: 0.05em; }
+}
+
+/* Signature exhibit: six columns will not fit a 375px screen.
+   Drop the derived Rate column, shrink inputs, allow scroll as
+   a last-resort fallback. */
+@media (max-width: 640px) {
+  .exhibit { box-shadow: 4px 4px 0 var(--panel); }
+  .exhibit-body { padding: 0.85rem; overflow-x: auto; }
+  table.audit { font-size: 0.72rem; }
+  table.audit th:nth-child(4), table.audit td:nth-child(4) { display: none; }
+  table.audit th { font-size: 0.58rem; padding-right: 0.3rem; }
+  table.audit td { padding-right: 0.3rem; }
+  table.audit input { width: 3.5rem; padding: 0.22rem 0.3rem; }
+  .verdict { font-size: 0.56rem; padding: 0.14rem 0.32rem; }
+  .exhibit-head { font-size: 0.62rem; padding: 0.6rem 0.85rem; }
+  .exhibit-foot { padding: 0.75rem 0.85rem; font-size: 0.64rem; }
+}
+
+/* Hero: tighten the stack so the exhibit is visible sooner */
+@media (max-width: 900px) {
+  .hero { padding-block: 2.2rem 2.5rem; }
+  .hero .lede { max-width: none; margin-top: 1.1rem; }
+  .hero-actions { margin-top: 1.6rem; }
+  .btn { padding: 0.72rem 1.15rem; font-size: 0.85rem; }
+}
+
+/* Cards and prose breathing room on small screens */
+@media (max-width: 560px) {
+  .wrap { padding-inline: 1.15rem; }
+  .card { padding: 1.25rem; }
+  .callout { padding: 1.1rem 1.15rem; }
+  .prose table { font-size: 0.68rem; display: block; overflow-x: auto; }
+  .site-foot .wrap { flex-direction: column; gap: 1.1rem; }
+}
+
+/* Wide data tables on the tracker page */
+.table-scroll { overflow-x: auto; margin: 1.5rem 0; -webkit-overflow-scrolling: touch; }
+.table-scroll table { margin: 0; min-width: 680px; }
+.scroll-hint {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.64rem;
+  color: var(--slate-lt); letter-spacing: 0.08em; text-transform: uppercase;
+  margin: 0 0 0.4rem; display: none;
+}
+@media (max-width: 720px) { .scroll-hint { display: block; } }
+
+/* Status pills for the tracker */
+.pill {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.6rem;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 0.16rem 0.44rem; border-radius: 2px; white-space: nowrap;
+}
+.pill.live { background: #E2F0EA; color: var(--pass); }
+.pill.pending { background: #FBF0DC; color: #8A6100; }
+.pill.uncertain { background: #F7E4E7; color: var(--flag); }
+
+/* ---------- top announcement / CTA bar ---------- */
+.cta-bar {
+  background: var(--indigo); color: #fff;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem; letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--indigo);
+}
+.cta-bar .wrap {
+  display: flex; align-items: center; justify-content: center;
+  gap: 0.85rem; padding-block: 0.62rem; flex-wrap: wrap; text-align: center;
+}
+.cta-bar strong { font-weight: 600; }
+.cta-bar a {
+  color: #fff; text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  padding-bottom: 1px; white-space: nowrap;
+}
+.cta-bar a:hover { color: #fff; border-bottom-color: #fff; }
+.cta-bar .dot { color: rgba(255,255,255,0.45); }
+@media (max-width: 660px) {
+  .cta-bar { font-size: 0.65rem; }
+  .cta-bar .wrap { gap: 0.4rem; padding-block: 0.55rem; line-height: 1.5; }
+  .cta-bar .dot { display: none; }
+}
+
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Greenpoint AI Compliance LLC","url":"https://greenpointaicompliance.com/","email":"hello@greenpointaicompliance.com","address":{"@type":"PostalAddress","streetAddress":"418 Broadway, Ste R","addressLocality":"Albany","addressRegion":"NY","postalCode":"12207","addressCountry":"US"}}
+</script>
+</head>
+<body>
+<div class="cta-bar"><div class="wrap">
+<span><strong>Enforcement tightened in 2026</strong> after the State Comptroller audit of DCWP.</span>
+<span class="dot">&mdash;</span>
+<a href="mailto:hello@greenpointaicompliance.com">Book a free 20-minute scoping call &rarr;</a>
+</div></div>
+<header class="site-head"><div class="wrap">
+<a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span>Greenpoint</a>
+<nav class="site-nav" aria-label="Main">
+<a href="nyc-local-law-144-bias-audit-guide.html">Guide</a>
+<a href="four-fifths-rule-calculator.html">Calculator</a>
+<a href="ai-hiring-laws-by-state.html">State Laws</a>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+</nav></div></header>
+<main>
+<section class="page-head"><div class="wrap">
+<span class="eyebrow">Legal</span>
+<h1>Legal notices, disclaimers and privacy</h1>
+<p class="lede">Entity information, terms of use, our independence position, and how this site handles data &mdash; which is to say, almost not at all.</p>
+<p class="meta">Effective 4 August 2026 &middot; Last updated 4 August 2026</p>
+</div></section>
+
+<section class="section" style="border-top:none;padding-top:2.5rem"><div class="wrap"><div class="prose">
+
+<div class="toc">
+<p>Contents</p>
+<ol>
+<li><a href="#entity">Entity information</a></li>
+<li><a href="#nolegal">No legal advice; no attorney&ndash;client relationship</a></li>
+<li><a href="#independence">Independence and conflicts of interest</a></li>
+<li><a href="#terms">Terms of use</a></li>
+<li><a href="#calculator">The calculator: limitations</a></li>
+<li><a href="#privacy">Privacy policy</a></li>
+<li><a href="#cookies">Cookies and tracking</a></li>
+<li><a href="#rights">Your data rights</a></li>
+<li><a href="#ip">Intellectual property</a></li>
+<li><a href="#accessibility">Accessibility</a></li>
+<li><a href="#contact">Contact</a></li>
+</ol>
+</div>
+
+<h2 id="entity">1. Entity information</h2>
+<p>This website is operated by <strong>Greenpoint AI Compliance LLC</strong>, a limited liability company organized under the laws of the State of New York.</p>
+<table>
+<tbody>
+<tr><th>Legal entity</th><td>Greenpoint AI Compliance LLC</td></tr>
+<tr><th>Jurisdiction</th><td>New York, United States</td></tr>
+<tr><th>Registered address</th><td>418 Broadway, Ste R, Albany, NY 12207, USA</td></tr>
+<tr><th>Contact</th><td>hello@greenpointaicompliance.com</td></tr>
+<tr><th>Nature of business</th><td>Regulatory compliance consulting and independent assessment services</td></tr>
+</tbody>
+</table>
+<p>Greenpoint AI Compliance LLC is not a law firm, is not an accounting firm, and does not provide legal, accounting, tax, or investment advice.</p>
+
+<h2 id="nolegal">2. No legal advice; no attorney&ndash;client relationship</h2>
+<p>All content on this site &mdash; including the compliance guide, the jurisdictional reference, the calculator, and any downloadable material &mdash; is general information about regulatory requirements. It is not legal advice and must not be relied upon as such.</p>
+<p>Using this site, contacting us, or receiving a proposal does not create an attorney&ndash;client relationship, and no such relationship exists at any point. We are consultants, not counsel. Statutes, regulations and enforcement practice change frequently in this area, and application to your specific circumstances requires review by a qualified attorney licensed in the relevant jurisdiction.</p>
+<p>Where our work touches questions of legal interpretation &mdash; whether a particular tool meets a statutory definition, whether an obligation attaches to a particular hiring process &mdash; we will say so and recommend you obtain a legal opinion. We do not substitute for one.</p>
+
+<h2 id="independence">3. Independence and conflicts of interest</h2>
+<p>New York City Administrative Code &sect;&sect; 20-870 through 20-874 requires that bias audits of automated employment decision tools be conducted by an independent auditor. We take that requirement seriously and it constrains what work we accept.</p>
+<p>Greenpoint AI Compliance LLC:</p>
+<ul>
+<li>Does not develop, sell, license, resell, or implement automated employment decision tools, applicant tracking systems, assessment platforms, or any related software.</li>
+<li>Holds no equity, revenue-sharing arrangement, referral arrangement, or other financial interest in any vendor of such tools.</li>
+<li>Accepts no compensation contingent on the outcome or findings of an assessment.</li>
+<li>Will decline any engagement where a relationship exists that would compromise independence under applicable law, and will disclose in writing any relationship that could reasonably be perceived as bearing on independence.</li>
+</ul>
+<p>If you become aware of any circumstance that you believe affects our independence with respect to an engagement, tell us. We would rather decline work than sign a report whose independence can be questioned.</p>
+
+<h2 id="terms">4. Terms of use</h2>
+<p>By accessing this site you agree to these terms. If you do not agree, do not use the site.</p>
+<p><strong>Permitted use.</strong> You may read, print and share this site&rsquo;s content for your own informational and internal business purposes.</p>
+<p><strong>No warranty.</strong> This site and its content are provided &ldquo;as is,&rdquo; without warranty of any kind, express or implied, including any warranty of accuracy, completeness, merchantability, or fitness for a particular purpose. Regulatory status changes; entries in the jurisdictional reference may be out of date at the moment you read them.</p>
+<p><strong>Limitation of liability.</strong> To the maximum extent permitted by law, Greenpoint AI Compliance LLC shall not be liable for any indirect, incidental, consequential, special or punitive damages, or any loss of profits, revenue, data or goodwill, arising from your use of or reliance on this site. Our total aggregate liability arising from your use of this site shall not exceed one hundred US dollars ($100). Nothing in these terms limits liability for fraud or for any liability that cannot lawfully be limited.</p>
+<p><strong>Engagements are governed separately.</strong> These terms apply to the website only. Any services we provide are governed exclusively by a written engagement letter, which controls in the event of any conflict with these terms.</p>
+<p><strong>Third-party links.</strong> Links to third-party sites are provided for convenience. We do not endorse and are not responsible for their content.</p>
+<p><strong>Governing law.</strong> These terms are governed by the laws of the State of New York, without regard to conflict of laws principles. Any dispute shall be brought exclusively in the state or federal courts located in the State of New York.</p>
+<p><strong>Changes.</strong> We may revise these terms at any time. The effective date at the top of this page indicates the current version.</p>
+
+<h2 id="calculator">5. The calculator: limitations</h2>
+<p>The four-fifths rule calculator on this site performs an arithmetic operation on numbers you enter. It is provided free and without warranty.</p>
+<ul>
+<li><strong>It does not constitute a bias audit</strong> under NYC Local Law 144 or any other law. A compliant audit requires independence, intersectional analysis, treatment of unknown-category individuals, and documentation the calculator does not produce.</li>
+<li><strong>It does not assess statistical significance.</strong> Ratios computed on small groups are unstable and should be treated as directional only.</li>
+<li><strong>It does not constitute a legal conclusion.</strong> A ratio below 0.80 is a screening threshold, not a finding of unlawful discrimination.</li>
+<li><strong>Nothing you enter is transmitted to us.</strong> All calculation happens in your browser. We do not receive, store, or have any means of accessing the figures you type.</li>
+</ul>
+
+<h2 id="privacy">6. Privacy policy</h2>
+<p>This is a static informational website. It has no accounts, no forms, no logins and no payment processing. Our data practices are correspondingly minimal.</p>
+
+<h3>What we collect through the website</h3>
+<p><strong>Effectively nothing.</strong> We do not operate contact forms, newsletter signups, chat widgets, or user accounts. We do not run advertising or behavioural tracking. The calculator processes data locally in your browser and transmits nothing.</p>
+<p>Our hosting provider (Cloudflare) processes standard server request data &mdash; IP address, user agent, requested URL, timestamp &mdash; as a technical necessity of delivering the site and protecting it from abuse. This is handled under Cloudflare&rsquo;s own privacy terms.</p>
+<p>This site loads web fonts from Google Fonts. Doing so causes your browser to make a request to Google&rsquo;s servers, which may log your IP address. If you would prefer to avoid this, most browsers and privacy extensions can block third-party font requests; the site remains fully functional without them.</p>
+
+<h3>What we collect when you contact us</h3>
+<p>If you email us, we receive whatever you send &mdash; typically your name, email address, employer and a description of your situation. We use it solely to respond and, if you engage us, to perform the work. We do not sell it, rent it, or share it for marketing purposes, and we do not add you to any mailing list without your express request.</p>
+
+<h3>Client and engagement data</h3>
+<p>Assessment engagements necessarily involve sensitive data, including demographic information about job applicants. That data is governed by the engagement letter and any data processing agreement executed with the client, not by this privacy policy. Our standard practice is to require pseudonymised or aggregated data wherever the analysis permits, to hold data only for as long as necessary, and to retain workpapers for seven years as professional standards require.</p>
+
+<h3>Retention</h3>
+<p>Email correspondence is retained for as long as necessary for the business purpose for which it was sent, and thereafter as required by applicable recordkeeping obligations.</p>
+
+<h2 id="cookies">7. Cookies and tracking</h2>
+<p><strong>This site sets no cookies.</strong> No analytics, no advertising pixels, no session storage, no local storage, no fingerprinting. There is no consent banner because there is nothing to consent to.</p>
+<p>If this changes &mdash; for example if we add privacy-respecting analytics &mdash; we will update this section and the effective date above before doing so.</p>
+
+<h2 id="rights">8. Your data rights</h2>
+<p>Depending on where you live, you may have rights to access, correct, delete, or restrict processing of personal information we hold about you, and to object to processing or request portability. This may include rights under the EU and UK General Data Protection Regulation, the California Consumer Privacy Act as amended, and comparable state laws.</p>
+<p>Because we hold almost nothing, most such requests resolve quickly. To exercise any right, email <a href="mailto:hello@greenpointaicompliance.com">hello@greenpointaicompliance.com</a> and we will respond within the period the applicable law requires. We will not discriminate against you for exercising these rights.</p>
+<p><strong>We do not sell or share personal information</strong> as those terms are defined under the California Consumer Privacy Act or any comparable state law.</p>
+
+<h2 id="ip">9. Intellectual property</h2>
+<p>All content on this site, including text, layout, design and the calculator, is &copy; 2026 Greenpoint AI Compliance LLC unless otherwise noted. You may quote briefly with attribution and a link. You may not republish substantial portions, or reproduce the calculator, without written permission.</p>
+<p>Statutory text, regulatory citations and government publications referenced on this site are in the public domain. Third-party names and marks referenced are the property of their respective owners, and their mention does not imply any affiliation or endorsement.</p>
+
+<h2 id="accessibility">10. Accessibility</h2>
+<p>We aim to meet WCAG 2.1 Level AA. If you encounter a barrier to using this site, email us and we will address it &mdash; and tell you when it is fixed.</p>
+
+<h2 id="contact">11. Contact</h2>
+<p>Questions about anything on this page, or about our independence, data handling or terms:</p>
+<p><strong>Greenpoint AI Compliance LLC</strong><br>
+418 Broadway, Ste R<br>
+Albany, NY 12207, USA<br>
+<a href="mailto:hello@greenpointaicompliance.com">hello@greenpointaicompliance.com</a></p>
+
+<p style="margin-top:2.5rem;font-size:0.85rem;color:var(--slate-lt)">This page is a template prepared for general use and has not been reviewed by counsel. Have an attorney review it before relying on the limitation of liability, governing law, or privacy provisions, particularly if you begin serving clients subject to the EU AI Act or holding EU personal data.</p>
+
+</div></div></section>
+
+</main>
+<footer class="site-foot"><div class="wrap">
+<div><p><strong>Greenpoint AI Compliance LLC</strong><br>418 Broadway, Ste R<br>Albany, NY 12207</p>
+<p><a href="nyc-local-law-144-bias-audit-guide.html">Guide</a> &middot; <a href="four-fifths-rule-calculator.html">Calculator</a> &middot; <a href="ai-hiring-laws-by-state.html">State Laws</a> &middot; <a href="services.html">Services</a> &middot; <a href="about.html">About</a> &middot; <a href="legal.html">Legal &amp; Privacy</a></p></div>
+<p class="disclaimer">Greenpoint AI Compliance LLC provides regulatory consulting and independent assessment services. Nothing on this site is legal advice, and no attorney&ndash;client relationship is created by using it or by contacting us. See <a href="legal.html">Legal &amp; Privacy</a>.</p>
+</div></footer>
+</body>
+</html>

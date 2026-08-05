@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Four-Fifths Rule Calculator | Adverse Impact &amp; Selection Rate Analysis</title>
+<meta name="description" content="Free four-fifths rule calculator. Enter selection counts by demographic group to compute selection rates and impact ratios against the EEOC 0.80 adverse impact threshold. Runs entirely in your browser.">
+<link rel="canonical" href="https://greenpointaicompliance.com/four-fifths-rule-calculator.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Four-Fifths Rule Calculator | Adverse Impact &amp; Selection Rate Analysis">
+<meta property="og:description" content="Free four-fifths rule calculator. Enter selection counts by demographic group to compute selection rates and impact ratios against the EEOC 0.80 adverse impact threshold. Runs entirely in your browser.">
+<meta property="og:url" content="https://greenpointaicompliance.com/four-fifths-rule-calculator.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Cpath d=%27M0 0h32v25l-7 7H0z%27 fill=%27%231E2A62%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Greenpoint AI Compliance — shared stylesheet
+   Palette: cool ink + paper, institutional indigo,
+   audit-signal crimson/green. Deliberately not warm-cream.
+   Type: Archivo (display, tight) / Source Serif 4 (body)
+         / IBM Plex Mono (data + labels)
+   ============================================================ */
+
+:root {
+  --ink:      #0E1116;
+  --slate:    #4A5464;
+  --slate-lt: #737D8C;
+  --paper:    #FAFAFB;
+  --panel:    #F1F3F7;
+  --rule:     #E2E5EB;
+  --indigo:   #1E2A62;
+  --indigo-lt:#3A4B96;
+  --flag:     #A3162A;
+  --pass:     #17654A;
+
+  --maxw: 1140px;
+  --measure: 68ch;
+
+  --step--1: clamp(0.82rem, 0.79rem + 0.13vw, 0.89rem);
+  --step-0:  clamp(1rem, 0.96rem + 0.2vw, 1.09rem);
+  --step-1:  clamp(1.2rem, 1.12rem + 0.4vw, 1.45rem);
+  --step-2:  clamp(1.5rem, 1.34rem + 0.78vw, 2rem);
+  --step-3:  clamp(1.9rem, 1.6rem + 1.5vw, 2.9rem);
+  --step-4:  clamp(2.4rem, 1.85rem + 2.7vw, 4.3rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: var(--step-0);
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: Archivo, "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: -0.028em;
+  line-height: 1.06;
+  margin: 0;
+  font-weight: 700;
+}
+
+a { color: var(--indigo); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--indigo-lt); }
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--indigo);
+  outline-offset: 3px;
+}
+
+.wrap { max-width: var(--maxw); margin-inline: auto; padding-inline: 1.5rem; }
+
+/* ---------- eyebrow / label utility ---------- */
+.eyebrow {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--slate-lt);
+  margin: 0 0 0.9rem;
+  display: block;
+}
+
+/* ---------- header ---------- */
+.site-head {
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+  position: sticky; top: 0; z-index: 50;
+}
+.site-head .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1.5rem; padding-block: 1rem;
+}
+.brand {
+  font-family: Archivo, sans-serif; font-weight: 700; font-size: 1.02rem;
+  letter-spacing: -0.03em; color: var(--ink); text-decoration: none;
+  display: flex; align-items: center; gap: 0.55rem;
+}
+.brand .mark {
+  width: 22px; height: 22px; flex: none;
+  background: var(--indigo);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0 100%);
+}
+.site-nav { display: flex; gap: 1.6rem; align-items: center; }
+.site-nav a {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.76rem;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--slate); text-decoration: none;
+}
+.site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--ink); }
+.site-nav a[aria-current="page"] { border-bottom: 2px solid var(--indigo); padding-bottom: 2px; }
+@media (max-width: 720px) {
+  .site-nav { gap: 1rem; flex-wrap: wrap; justify-content: flex-end; }
+  .site-nav a { font-size: 0.68rem; }
+}
+
+/* ---------- hero ---------- */
+.hero { padding-block: clamp(3rem, 7vw, 6rem) clamp(2.5rem, 5vw, 4.5rem); }
+.hero-grid {
+  display: grid; gap: clamp(2.5rem, 5vw, 4rem);
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  align-items: start;
+}
+@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
+
+.hero h1 { font-size: var(--step-4); }
+.hero h1 em {
+  font-style: normal;
+  display: block;
+  color: var(--indigo);
+}
+.hero .lede {
+  font-size: var(--step-1); color: var(--slate);
+  max-width: 34ch; margin: 1.6rem 0 0; line-height: 1.45;
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2.2rem; }
+
+.btn {
+  font-family: Archivo, sans-serif; font-weight: 600; font-size: 0.9rem;
+  padding: 0.8rem 1.4rem; border-radius: 2px; text-decoration: none;
+  border: 1px solid var(--indigo); display: inline-block;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.btn-solid { background: var(--indigo); color: #fff; }
+.btn-solid:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+.btn-ghost { background: transparent; color: var(--indigo); }
+.btn-ghost:hover { background: var(--panel); color: var(--indigo); }
+
+/* ---------- signature: audit exhibit ---------- */
+.exhibit {
+  border: 1px solid var(--ink);
+  background: #fff;
+  box-shadow: 6px 6px 0 var(--panel);
+}
+.exhibit-head {
+  background: var(--ink); color: #fff;
+  padding: 0.7rem 1.1rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+  display: flex; justify-content: space-between; gap: 1rem;
+}
+.exhibit-head span:last-child { color: #9AA4B8; }
+.exhibit-body { padding: 1.1rem; }
+
+table.audit {
+  width: 100%; border-collapse: collapse;
+  font-family: "IBM Plex Mono", monospace; font-size: 0.78rem;
+}
+table.audit th {
+  text-align: left; font-weight: 600; color: var(--slate-lt);
+  font-size: 0.64rem; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0 0.5rem 0.55rem 0; border-bottom: 1px solid var(--rule);
+  white-space: nowrap;
+}
+table.audit th:not(:first-child), table.audit td:not(:first-child) { text-align: right; }
+table.audit td {
+  padding: 0.5rem 0.5rem 0.5rem 0; border-bottom: 1px solid var(--rule);
+  font-variant-numeric: tabular-nums;
+}
+table.audit tr:last-child td { border-bottom: none; }
+table.audit input {
+  width: 5.2rem; font: inherit; text-align: right;
+  border: 1px solid var(--rule); background: var(--paper);
+  padding: 0.25rem 0.4rem; border-radius: 2px; color: var(--ink);
+}
+table.audit input:hover { border-color: var(--slate-lt); }
+
+.ratio { font-weight: 600; }
+.verdict {
+  font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.16rem 0.44rem; border-radius: 2px; white-space: nowrap;
+}
+.verdict.fail { background: #F7E4E7; color: var(--flag); }
+.verdict.pass { background: #E2F0EA; color: var(--pass); }
+.exhibit-foot {
+  border-top: 1px solid var(--rule); padding: 0.85rem 1.1rem;
+  font-family: "IBM Plex Mono", monospace; font-size: 0.68rem;
+  color: var(--slate); line-height: 1.5;
+}
+.exhibit-foot strong { color: var(--ink); }
+
+/* ---------- generic sections ---------- */
+.section { padding-block: clamp(3rem, 6vw, 5.5rem); border-top: 1px solid var(--rule); }
+.section-title { font-size: var(--step-3); max-width: 20ch; }
+.section-intro { color: var(--slate); max-width: var(--measure); margin-top: 1.1rem; }
+
+/* obligations — a real ordered sequence, so numbering earns its place */
+.steps { list-style: none; padding: 0; margin: 2.8rem 0 0; display: grid; gap: 0; }
+.steps li {
+  display: grid; grid-template-columns: 4.5rem 1fr; gap: 1.5rem;
+  padding: 1.6rem 0; border-top: 1px solid var(--rule);
+}
+.steps li:last-child { border-bottom: 1px solid var(--rule); }
+.steps .num {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.72rem;
+  color: var(--indigo); letter-spacing: 0.1em; padding-top: 0.35rem;
+}
+.steps h3 { font-size: var(--step-1); margin-bottom: 0.5rem; }
+.steps p { margin: 0; color: var(--slate); max-width: var(--measure); }
+@media (max-width: 620px) {
+  .steps li { grid-template-columns: 1fr; gap: 0.5rem; }
+}
+
+/* cards */
+.cards { display: grid; gap: 1.25rem; margin-top: 2.8rem; grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 880px) { .cards { grid-template-columns: 1fr; } }
+.card {
+  border: 1px solid var(--rule); background: #fff; padding: 1.6rem;
+  display: flex; flex-direction: column;
+}
+.card h3 { font-size: var(--step-1); margin-bottom: 0.7rem; }
+.card p { color: var(--slate); margin: 0 0 1.2rem; font-size: 0.95rem; }
+.card .price {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.8rem;
+  color: var(--ink); border-top: 1px solid var(--rule);
+  padding-top: 0.9rem; margin-top: auto;
+}
+.card .price span { display: block; color: var(--slate-lt); font-size: 0.7rem; margin-top: 0.25rem; }
+
+/* callout */
+.callout {
+  border-left: 3px solid var(--indigo); background: var(--panel);
+  padding: 1.3rem 1.5rem; margin: 2rem 0; max-width: var(--measure);
+}
+.callout p { margin: 0; }
+.callout p + p { margin-top: 0.8rem; }
+
+/* prose (guide page) */
+.prose { max-width: var(--measure); }
+.prose h2 { font-size: var(--step-2); margin: 3rem 0 1rem; }
+.prose h3 { font-size: var(--step-1); margin: 2.2rem 0 0.7rem; }
+.prose p { margin: 0 0 1.1rem; }
+.prose ul, .prose ol { margin: 0 0 1.3rem; padding-left: 1.3rem; }
+.prose li { margin-bottom: 0.5rem; }
+.prose table {
+  width: 100%; border-collapse: collapse; margin: 1.5rem 0;
+  font-family: "IBM Plex Mono", monospace; font-size: 0.78rem;
+}
+.prose table th {
+  text-align: left; background: var(--panel); padding: 0.6rem 0.7rem;
+  font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase;
+  border: 1px solid var(--rule);
+}
+.prose table td { padding: 0.6rem 0.7rem; border: 1px solid var(--rule); }
+
+.toc {
+  border: 1px solid var(--rule); background: #fff;
+  padding: 1.3rem 1.5rem; margin: 2rem 0 2.5rem;
+}
+.toc p {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.68rem;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate-lt);
+  margin: 0 0 0.8rem;
+}
+.toc ol { margin: 0; padding-left: 1.2rem; }
+.toc li { margin-bottom: 0.35rem; font-size: 0.94rem; }
+
+/* page header for interior pages */
+.page-head { padding-block: clamp(2.8rem, 6vw, 4.5rem) 0; }
+.page-head h1 { font-size: var(--step-3); max-width: 22ch; }
+.page-head .lede { color: var(--slate); max-width: var(--measure); margin-top: 1.2rem; font-size: var(--step-1); line-height: 1.45; }
+.meta {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.7rem;
+  color: var(--slate-lt); margin-top: 1.5rem; letter-spacing: 0.04em;
+}
+
+/* CTA band */
+.cta-band { background: var(--ink); color: #fff; padding-block: clamp(3rem, 6vw, 4.5rem); }
+.cta-band h2 { font-size: var(--step-2); max-width: 20ch; color: #fff; }
+.cta-band p { color: #A9B2C4; max-width: 52ch; margin: 1.1rem 0 2rem; }
+.cta-band .btn-solid { background: #fff; color: var(--ink); border-color: #fff; }
+.cta-band .btn-solid:hover { background: var(--indigo-lt); border-color: var(--indigo-lt); color: #fff; }
+
+/* footer */
+.site-foot {
+  border-top: 1px solid var(--rule); padding-block: 2.5rem;
+  font-size: 0.85rem; color: var(--slate);
+}
+.site-foot .wrap { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between; }
+.site-foot a { color: var(--slate); }
+.site-foot .disclaimer { max-width: 46ch; font-size: 0.78rem; color: var(--slate-lt); }
+
+/* reveal */
+.reveal { opacity: 0; transform: translateY(12px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
+
+/* ============================================================
+   RESPONSIVE — mobile corrections
+   ============================================================ */
+
+/* Header: stack brand over nav, drop sticky (2 rows eats too much
+   viewport on a phone), tighten type. */
+@media (max-width: 660px) {
+  .site-head { position: static; }
+  .site-head .wrap {
+    flex-direction: column; align-items: flex-start;
+    gap: 0.7rem; padding-block: 0.85rem;
+  }
+  .brand { font-size: 0.95rem; }
+  .site-nav {
+    width: 100%; justify-content: flex-start;
+    gap: 1.15rem; flex-wrap: wrap;
+  }
+  .site-nav a { font-size: 0.66rem; letter-spacing: 0.05em; }
+}
+
+/* Signature exhibit: six columns will not fit a 375px screen.
+   Drop the derived Rate column, shrink inputs, allow scroll as
+   a last-resort fallback. */
+@media (max-width: 640px) {
+  .exhibit { box-shadow: 4px 4px 0 var(--panel); }
+  .exhibit-body { padding: 0.85rem; overflow-x: auto; }
+  table.audit { font-size: 0.72rem; }
+  table.audit th:nth-child(4), table.audit td:nth-child(4) { display: none; }
+  table.audit th { font-size: 0.58rem; padding-right: 0.3rem; }
+  table.audit td { padding-right: 0.3rem; }
+  table.audit input { width: 3.5rem; padding: 0.22rem 0.3rem; }
+  .verdict { font-size: 0.56rem; padding: 0.14rem 0.32rem; }
+  .exhibit-head { font-size: 0.62rem; padding: 0.6rem 0.85rem; }
+  .exhibit-foot { padding: 0.75rem 0.85rem; font-size: 0.64rem; }
+}
+
+/* Hero: tighten the stack so the exhibit is visible sooner */
+@media (max-width: 900px) {
+  .hero { padding-block: 2.2rem 2.5rem; }
+  .hero .lede { max-width: none; margin-top: 1.1rem; }
+  .hero-actions { margin-top: 1.6rem; }
+  .btn { padding: 0.72rem 1.15rem; font-size: 0.85rem; }
+}
+
+/* Cards and prose breathing room on small screens */
+@media (max-width: 560px) {
+  .wrap { padding-inline: 1.15rem; }
+  .card { padding: 1.25rem; }
+  .callout { padding: 1.1rem 1.15rem; }
+  .prose table { font-size: 0.68rem; display: block; overflow-x: auto; }
+  .site-foot .wrap { flex-direction: column; gap: 1.1rem; }
+}
+
+/* Wide data tables on the tracker page */
+.table-scroll { overflow-x: auto; margin: 1.5rem 0; -webkit-overflow-scrolling: touch; }
+.table-scroll table { margin: 0; min-width: 680px; }
+.scroll-hint {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.64rem;
+  color: var(--slate-lt); letter-spacing: 0.08em; text-transform: uppercase;
+  margin: 0 0 0.4rem; display: none;
+}
+@media (max-width: 720px) { .scroll-hint { display: block; } }
+
+/* Status pills for the tracker */
+.pill {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.6rem;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 0.16rem 0.44rem; border-radius: 2px; white-space: nowrap;
+}
+.pill.live { background: #E2F0EA; color: var(--pass); }
+.pill.pending { background: #FBF0DC; color: #8A6100; }
+.pill.uncertain { background: #F7E4E7; color: var(--flag); }
+
+/* ---------- top announcement / CTA bar ---------- */
+.cta-bar {
+  background: var(--indigo); color: #fff;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem; letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--indigo);
+}
+.cta-bar .wrap {
+  display: flex; align-items: center; justify-content: center;
+  gap: 0.85rem; padding-block: 0.62rem; flex-wrap: wrap; text-align: center;
+}
+.cta-bar strong { font-weight: 600; }
+.cta-bar a {
+  color: #fff; text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  padding-bottom: 1px; white-space: nowrap;
+}
+.cta-bar a:hover { color: #fff; border-bottom-color: #fff; }
+.cta-bar .dot { color: rgba(255,255,255,0.45); }
+@media (max-width: 660px) {
+  .cta-bar { font-size: 0.65rem; }
+  .cta-bar .wrap { gap: 0.4rem; padding-block: 0.55rem; line-height: 1.5; }
+  .cta-bar .dot { display: none; }
+}
+
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Four-Fifths Rule Impact Ratio Calculator",
+"applicationCategory":"BusinessApplication","operatingSystem":"Any","url":"https://greenpointaicompliance.com/four-fifths-rule-calculator.html",
+"description":"Free calculator for adverse impact analysis. Enter selection counts by demographic group to compute selection rates and impact ratios against the EEOC four-fifths guideline.",
+"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+"publisher":{"@type":"Organization","name":"Greenpoint AI Compliance LLC"}}
+</script>
+</head>
+<body>
+<div class="cta-bar"><div class="wrap">
+<span><strong>Enforcement tightened in 2026</strong> after the State Comptroller audit of DCWP.</span>
+<span class="dot">&mdash;</span>
+<a href="mailto:hello@greenpointaicompliance.com">Book a free 20-minute scoping call &rarr;</a>
+</div></div>
+<header class="site-head"><div class="wrap">
+<a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span>Greenpoint</a>
+<nav class="site-nav" aria-label="Main">
+<a href="nyc-local-law-144-bias-audit-guide.html">Guide</a>
+<a href="four-fifths-rule-calculator.html" aria-current="page">Calculator</a>
+<a href="ai-hiring-laws-by-state.html">State Laws</a>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+</nav></div></header>
+<main>
+<section class="page-head"><div class="wrap">
+<span class="eyebrow">Free tool</span>
+<h1>Four-fifths rule calculator</h1>
+<p class="lede">Enter selection counts by group. The calculator returns selection rates, impact ratios against the highest-selected group, and a four-fifths guideline assessment.</p>
+<p class="meta">No signup &middot; nothing is transmitted &middot; all calculation happens in your browser</p>
+</div></section>
+
+<section class="section" style="border-top:none;padding-top:2rem"><div class="wrap">
+<div class="exhibit" style="max-width:760px">
+<div class="exhibit-head"><span>Adverse impact analysis</span><span>Editable</span></div>
+<div class="exhibit-body">
+<p class="eyebrow" style="margin-bottom:0.7rem">Add or remove rows to match your categories</p>
+<table class="audit">
+<thead><tr>
+<th scope="col">Group</th><th scope="col">Selected</th><th scope="col">Applicants</th>
+<th scope="col">Rate</th><th scope="col">Ratio</th><th scope="col"><span class="sr-only">Result</span></th>
+</tr></thead>
+<tbody id="rows"></tbody>
+</table>
+<div style="display:flex;gap:0.6rem;margin-top:1rem;flex-wrap:wrap">
+<button type="button" class="btn btn-ghost" id="addrow" style="font-size:0.78rem;padding:0.5rem 0.9rem">Add group</button>
+<button type="button" class="btn btn-ghost" id="reset" style="font-size:0.78rem;padding:0.5rem 0.9rem">Reset to example</button>
+</div>
+</div>
+<div class="exhibit-foot" id="verdict-note"></div>
+</div>
+</div></section>
+
+<section class="section"><div class="wrap"><div class="prose">
+<h2 style="margin-top:0">How the calculation works</h2>
+<p>The impact ratio is the simplest defensible measure of whether a selection process treats groups differently. Three steps:</p>
+<ol>
+<li><strong>Selection rate</strong> for each group = number selected divided by number of applicants.</li>
+<li><strong>Reference group</strong> = whichever group has the highest selection rate. It becomes the denominator and its own ratio is 1.00 by definition.</li>
+<li><strong>Impact ratio</strong> = each group's selection rate divided by the reference rate.</li>
+</ol>
+<p>Under the EEOC's Uniform Guidelines on Employee Selection Procedures, a ratio below four-fifths &mdash; 0.80 &mdash; is generally regarded as evidence of adverse impact. The guideline dates to 1978 and long predates machine learning; what is new is that automated tools now produce these disparities at scale and, increasingly, that the law requires you to measure and publish them.</p>
+
+<div class="callout">
+<p><strong>A ratio below 0.80 is not automatically illegal.</strong> It is a screening threshold that shifts the analysis toward whether the selection procedure is job-related and consistent with business necessity. Nor does NYC Local Law 144 treat 0.80 as pass-fail &mdash; it requires you to calculate and publish the ratios regardless of what they say.</p>
+</div>
+
+<h2>What the calculator does not do</h2>
+<p>This tool computes impact ratios for the categories you enter. A compliant Local Law 144 bias audit requires more:</p>
+<ul>
+<li><strong>Intersectional categories.</strong> Not just sex and race separately, but their combinations &mdash; Hispanic women, Black men, and so on. This is where disparities frequently appear that single-axis analysis misses entirely.</li>
+<li><strong>Scoring rate analysis</strong> for tools that produce scores rather than pass/fail outcomes, measured as the proportion of each group scoring above the median.</li>
+<li><strong>Treatment of unknown-category individuals</strong>, which must be counted and disclosed.</li>
+<li><strong>Independence.</strong> An audit you run yourself does not satisfy the statute. The auditor must have no employment or financial relationship with you that compromises independence.</li>
+</ul>
+<p>Use this to understand your exposure before commissioning an audit &mdash; not as a substitute for one. The <a href="nyc-local-law-144-bias-audit-guide.html">full compliance guide</a> covers what a defensible audit actually requires.</p>
+
+<h2>Statistical significance and small samples</h2>
+<p>Impact ratios computed on small applicant pools are unstable. With twenty applicants in a group, a single hiring decision can move the ratio by 0.15 or more. The Uniform Guidelines acknowledge this, and practitioners typically supplement the ratio with a significance test &mdash; a two-proportion z-test or Fisher's exact test &mdash; when group sizes are small.</p>
+<p>A practical rule: treat ratios computed on fewer than about thirty applicants per group as directional rather than conclusive, and say so in whatever you publish.</p>
+
+<p style="margin-top:2.5rem;font-size:0.85rem;color:var(--slate-lt)">This calculator is provided for general educational use. It is not legal advice and does not constitute a bias audit under NYC Local Law 144 or any other law.</p>
+</div></div></section><section class="cta-band"><div class="wrap">
+<h2>Twenty minutes to find out where you stand.</h2>
+<p>No cost, no proposal attached, and a straight answer about whether you have an obligation.</p>
+<a class="btn btn-solid" href="mailto:hello@greenpointaicompliance.com">hello@greenpointaicompliance.com</a>
+</div></section>
+</main>
+<footer class="site-foot"><div class="wrap">
+<div><p><strong>Greenpoint AI Compliance LLC</strong><br>418 Broadway, Ste R<br>Albany, NY 12207</p>
+<p><a href="nyc-local-law-144-bias-audit-guide.html">Guide</a> &middot; <a href="four-fifths-rule-calculator.html">Calculator</a> &middot; <a href="ai-hiring-laws-by-state.html">State Laws</a> &middot; <a href="services.html">Services</a> &middot; <a href="about.html">About</a> &middot; <a href="legal.html">Legal &amp; Privacy</a></p></div>
+<p class="disclaimer">Greenpoint AI Compliance LLC provides regulatory consulting and independent assessment services. Nothing on this site is legal advice, and no attorney&ndash;client relationship is created by using it or by contacting us. See <a href="legal.html">Legal &amp; Privacy</a>.</p>
+</div></footer>
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+<script>
+(function(){
+  var tbody=document.getElementById('rows'), note=document.getElementById('verdict-note');
+  var DEFAULTS=[['White men',120,400],['Black women',45,250],['Hispanic men',60,300],['Asian women',38,180]];
+  function rowHTML(name,sel,app){
+    return '<tr>'+
+      '<td><input type="text" class="gname" value="'+name+'" aria-label="Group name" style="width:7.5rem;text-align:left"></td>'+
+      '<td><input type="number" min="0" class="gsel" value="'+sel+'" aria-label="Selected"></td>'+
+      '<td><input type="number" min="1" class="gapp" value="'+app+'" aria-label="Applicants"></td>'+
+      '<td class="rate">&mdash;</td><td class="ratio">&mdash;</td><td class="flagcell"></td></tr>';
+  }
+  function build(data){ tbody.innerHTML=data.map(function(d){return rowHTML(d[0],d[1],d[2]);}).join(''); bind(); compute(); }
+  function bind(){ tbody.querySelectorAll('input').forEach(function(i){ i.oninput=compute; }); }
+  function compute(){
+    var trs=[].slice.call(tbody.querySelectorAll('tr')), data=[];
+    trs.forEach(function(tr){
+      var s=parseFloat(tr.querySelector('.gsel').value), a=parseFloat(tr.querySelector('.gapp').value);
+      data.push({tr:tr,rate:(isFinite(s)&&isFinite(a)&&a>0)?s/a:null,
+                 name:tr.querySelector('.gname').value||'Group', n:a});
+    });
+    var best=0; data.forEach(function(d){ if(d.rate!==null&&d.rate>best) best=d.rate; });
+    var fails=[], small=false;
+    data.forEach(function(d){
+      var rc=d.tr.querySelector('.rate'), ic=d.tr.querySelector('.ratio'), fc=d.tr.querySelector('.flagcell');
+      if(d.rate===null||best===0){ rc.textContent='—'; ic.textContent='—'; fc.innerHTML=''; return; }
+      if(d.n<30) small=true;
+      var r=d.rate/best;
+      rc.textContent=(d.rate*100).toFixed(1)+'%';
+      ic.textContent=r.toFixed(2);
+      var bad=r<0.8; if(bad) fails.push(d.name);
+      ic.style.color=bad?'var(--flag)':'var(--ink)';
+      fc.innerHTML='<span class="verdict '+(bad?'fail':'pass')+'">'+(bad?'Below 0.80':'Clears')+'</span>';
+    });
+    var msg;
+    if(fails.length){
+      msg='<strong style="color:var(--flag)">'+fails.length+' group'+(fails.length>1?'s fall':' falls')+
+          ' below 0.80:</strong> '+fails.join(', ')+'. Under the EEOC four-fifths guideline this is evidence of adverse impact warranting examination of whether the procedure is job-related and consistent with business necessity.';
+    } else {
+      msg='<strong>All groups clear 0.80.</strong> Impact ratio = each group\'s selection rate divided by the highest group\'s rate.';
+    }
+    if(small) msg+=' <em>At least one group has fewer than 30 applicants — treat those ratios as directional, not conclusive.</em>';
+    note.innerHTML=msg;
+  }
+  document.getElementById('addrow').onclick=function(){
+    tbody.insertAdjacentHTML('beforeend',rowHTML('New group',0,100)); bind(); compute();
+  };
+  document.getElementById('reset').onclick=function(){ build(DEFAULTS); };
+  build(DEFAULTS);
+})();
+</script>
+</body>
+</html>

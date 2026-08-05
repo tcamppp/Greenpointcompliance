@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | Greenpoint AI Compliance</title>
+<meta name="description" content="Independent AI compliance practice in Brooklyn, New York. Regulatory background in financial services compliance, surveillance and marketing review, applied to algorithmic hiring and AI governance.">
+<link rel="canonical" href="https://greenpointaicompliance.com/about.html">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="About | Greenpoint AI Compliance">
+<meta property="og:description" content="Independent AI compliance practice in Brooklyn, New York.">
+<meta property="og:url" content="https://greenpointaicompliance.com/about.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Cpath d=%27M0 0h32v25l-7 7H0z%27 fill=%27%231E2A62%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Greenpoint AI Compliance — shared stylesheet
+   Palette: cool ink + paper, institutional indigo,
+   audit-signal crimson/green. Deliberately not warm-cream.
+   Type: Archivo (display, tight) / Source Serif 4 (body)
+         / IBM Plex Mono (data + labels)
+   ============================================================ */
+
+:root {
+  --ink:      #0E1116;
+  --slate:    #4A5464;
+  --slate-lt: #737D8C;
+  --paper:    #FAFAFB;
+  --panel:    #F1F3F7;
+  --rule:     #E2E5EB;
+  --indigo:   #1E2A62;
+  --indigo-lt:#3A4B96;
+  --flag:     #A3162A;
+  --pass:     #17654A;
+
+  --maxw: 1140px;
+  --measure: 68ch;
+
+  --step--1: clamp(0.82rem, 0.79rem + 0.13vw, 0.89rem);
+  --step-0:  clamp(1rem, 0.96rem + 0.2vw, 1.09rem);
+  --step-1:  clamp(1.2rem, 1.12rem + 0.4vw, 1.45rem);
+  --step-2:  clamp(1.5rem, 1.34rem + 0.78vw, 2rem);
+  --step-3:  clamp(1.9rem, 1.6rem + 1.5vw, 2.9rem);
+  --step-4:  clamp(2.4rem, 1.85rem + 2.7vw, 4.3rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: var(--step-0);
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: Archivo, "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: -0.028em;
+  line-height: 1.06;
+  margin: 0;
+  font-weight: 700;
+}
+
+a { color: var(--indigo); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--indigo-lt); }
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--indigo);
+  outline-offset: 3px;
+}
+
+.wrap { max-width: var(--maxw); margin-inline: auto; padding-inline: 1.5rem; }
+
+/* ---------- eyebrow / label utility ---------- */
+.eyebrow {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--slate-lt);
+  margin: 0 0 0.9rem;
+  display: block;
+}
+
+/* ---------- header ---------- */
+.site-head {
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+  position: sticky; top: 0; z-index: 50;
+}
+.site-head .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1.5rem; padding-block: 1rem;
+}
+.brand {
+  font-family: Archivo, sans-serif; font-weight: 700; font-size: 1.02rem;
+  letter-spacing: -0.03em; color: var(--ink); text-decoration: none;
+  display: flex; align-items: center; gap: 0.55rem;
+}
+.brand .mark {
+  width: 22px; height: 22px; flex: none;
+  background: var(--indigo);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0 100%);
+}
+.site-nav { display: flex; gap: 1.6rem; align-items: center; }
+.site-nav a {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.76rem;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--slate); text-decoration: none;
+}
+.site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--ink); }
+.site-nav a[aria-current="page"] { border-bottom: 2px solid var(--indigo); padding-bottom: 2px; }
+@media (max-width: 720px) {
+  .site-nav { gap: 1rem; flex-wrap: wrap; justify-content: flex-end; }
+  .site-nav a { font-size: 0.68rem; }
+}
+
+/* ---------- hero ---------- */
+.hero { padding-block: clamp(3rem, 7vw, 6rem) clamp(2.5rem, 5vw, 4.5rem); }
+.hero-grid {
+  display: grid; gap: clamp(2.5rem, 5vw, 4rem);
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  align-items: start;
+}
+@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
+
+.hero h1 { font-size: var(--step-4); }
+.hero h1 em {
+  font-style: normal;
+  display: block;
+  color: var(--indigo);
+}
+.hero .lede {
+  font-size: var(--step-1); color: var(--slate);
+  max-width: 34ch; margin: 1.6rem 0 0; line-height: 1.45;
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2.2rem; }
+
+.btn {
+  font-family: Archivo, sans-serif; font-weight: 600; font-size: 0.9rem;
+  padding: 0.8rem 1.4rem; border-radius: 2px; text-decoration: none;
+  border: 1px solid var(--indigo); display: inline-block;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.btn-solid { background: var(--indigo); color: #fff; }
+.btn-solid:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+.btn-ghost { background: transparent; color: var(--indigo); }
+.btn-ghost:hover { background: var(--panel); color: var(--indigo); }
+
+/* ---------- signature: audit exhibit ---------- */
+.exhibit {
+  border: 1px solid var(--ink);
+  background: #fff;
+  box-shadow: 6px 6px 0 var(--panel);
+}
+.exhibit-head {
+  background: var(--ink); color: #fff;
+  padding: 0.7rem 1.1rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+  display: flex; justify-content: space-between; gap: 1rem;
+}
+.exhibit-head span:last-child { color: #9AA4B8; }
+.exhibit-body { padding: 1.1rem; }
+
+table.audit {
+  width: 100%; border-collapse: collapse;
+  font-family: "IBM Plex Mono", monospace; font-size: 0.78rem;
+}
+table.audit th {
+  text-align: left; font-weight: 600; color: var(--slate-lt);
+  font-size: 0.64rem; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0 0.5rem 0.55rem 0; border-bottom: 1px solid var(--rule);
+  white-space: nowrap;
+}
+table.audit th:not(:first-child), table.audit td:not(:first-child) { text-align: right; }
+table.audit td {
+  padding: 0.5rem 0.5rem 0.5rem 0; border-bottom: 1px solid var(--rule);
+  font-variant-numeric: tabular-nums;
+}
+table.audit tr:last-child td { border-bottom: none; }
+table.audit input {
+  width: 5.2rem; font: inherit; text-align: right;
+  border: 1px solid var(--rule); background: var(--paper);
+  padding: 0.25rem 0.4rem; border-radius: 2px; color: var(--ink);
+}
+table.audit input:hover { border-color: var(--slate-lt); }
+
+.ratio { font-weight: 600; }
+.verdict {
+  font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.16rem 0.44rem; border-radius: 2px; white-space: nowrap;
+}
+.verdict.fail { background: #F7E4E7; color: var(--flag); }
+.verdict.pass { background: #E2F0EA; color: var(--pass); }
+.exhibit-foot {
+  border-top: 1px solid var(--rule); padding: 0.85rem 1.1rem;
+  font-family: "IBM Plex Mono", monospace; font-size: 0.68rem;
+  color: var(--slate); line-height: 1.5;
+}
+.exhibit-foot strong { color: var(--ink); }
+
+/* ---------- generic sections ---------- */
+.section { padding-block: clamp(3rem, 6vw, 5.5rem); border-top: 1px solid var(--rule); }
+.section-title { font-size: var(--step-3); max-width: 20ch; }
+.section-intro { color: var(--slate); max-width: var(--measure); margin-top: 1.1rem; }
+
+/* obligations — a real ordered sequence, so numbering earns its place */
+.steps { list-style: none; padding: 0; margin: 2.8rem 0 0; display: grid; gap: 0; }
+.steps li {
+  display: grid; grid-template-columns: 4.5rem 1fr; gap: 1.5rem;
+  padding: 1.6rem 0; border-top: 1px solid var(--rule);
+}
+.steps li:last-child { border-bottom: 1px solid var(--rule); }
+.steps .num {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.72rem;
+  color: var(--indigo); letter-spacing: 0.1em; padding-top: 0.35rem;
+}
+.steps h3 { font-size: var(--step-1); margin-bottom: 0.5rem; }
+.steps p { margin: 0; color: var(--slate); max-width: var(--measure); }
+@media (max-width: 620px) {
+  .steps li { grid-template-columns: 1fr; gap: 0.5rem; }
+}
+
+/* cards */
+.cards { display: grid; gap: 1.25rem; margin-top: 2.8rem; grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 880px) { .cards { grid-template-columns: 1fr; } }
+.card {
+  border: 1px solid var(--rule); background: #fff; padding: 1.6rem;
+  display: flex; flex-direction: column;
+}
+.card h3 { font-size: var(--step-1); margin-bottom: 0.7rem; }
+.card p { color: var(--slate); margin: 0 0 1.2rem; font-size: 0.95rem; }
+.card .price {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.8rem;
+  color: var(--ink); border-top: 1px solid var(--rule);
+  padding-top: 0.9rem; margin-top: auto;
+}
+.card .price span { display: block; color: var(--slate-lt); font-size: 0.7rem; margin-top: 0.25rem; }
+
+/* callout */
+.callout {
+  border-left: 3px solid var(--indigo); background: var(--panel);
+  padding: 1.3rem 1.5rem; margin: 2rem 0; max-width: var(--measure);
+}
+.callout p { margin: 0; }
+.callout p + p { margin-top: 0.8rem; }
+
+/* prose (guide page) */
+.prose { max-width: var(--measure); }
+.prose h2 { font-size: var(--step-2); margin: 3rem 0 1rem; }
+.prose h3 { font-size: var(--step-1); margin: 2.2rem 0 0.7rem; }
+.prose p { margin: 0 0 1.1rem; }
+.prose ul, .prose ol { margin: 0 0 1.3rem; padding-left: 1.3rem; }
+.prose li { margin-bottom: 0.5rem; }
+.prose table {
+  width: 100%; border-collapse: collapse; margin: 1.5rem 0;
+  font-family: "IBM Plex Mono", monospace; font-size: 0.78rem;
+}
+.prose table th {
+  text-align: left; background: var(--panel); padding: 0.6rem 0.7rem;
+  font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase;
+  border: 1px solid var(--rule);
+}
+.prose table td { padding: 0.6rem 0.7rem; border: 1px solid var(--rule); }
+
+.toc {
+  border: 1px solid var(--rule); background: #fff;
+  padding: 1.3rem 1.5rem; margin: 2rem 0 2.5rem;
+}
+.toc p {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.68rem;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate-lt);
+  margin: 0 0 0.8rem;
+}
+.toc ol { margin: 0; padding-left: 1.2rem; }
+.toc li { margin-bottom: 0.35rem; font-size: 0.94rem; }
+
+/* page header for interior pages */
+.page-head { padding-block: clamp(2.8rem, 6vw, 4.5rem) 0; }
+.page-head h1 { font-size: var(--step-3); max-width: 22ch; }
+.page-head .lede { color: var(--slate); max-width: var(--measure); margin-top: 1.2rem; font-size: var(--step-1); line-height: 1.45; }
+.meta {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.7rem;
+  color: var(--slate-lt); margin-top: 1.5rem; letter-spacing: 0.04em;
+}
+
+/* CTA band */
+.cta-band { background: var(--ink); color: #fff; padding-block: clamp(3rem, 6vw, 4.5rem); }
+.cta-band h2 { font-size: var(--step-2); max-width: 20ch; color: #fff; }
+.cta-band p { color: #A9B2C4; max-width: 52ch; margin: 1.1rem 0 2rem; }
+.cta-band .btn-solid { background: #fff; color: var(--ink); border-color: #fff; }
+.cta-band .btn-solid:hover { background: var(--indigo-lt); border-color: var(--indigo-lt); color: #fff; }
+
+/* footer */
+.site-foot {
+  border-top: 1px solid var(--rule); padding-block: 2.5rem;
+  font-size: 0.85rem; color: var(--slate);
+}
+.site-foot .wrap { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between; }
+.site-foot a { color: var(--slate); }
+.site-foot .disclaimer { max-width: 46ch; font-size: 0.78rem; color: var(--slate-lt); }
+
+/* reveal */
+.reveal { opacity: 0; transform: translateY(12px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
+
+/* ============================================================
+   RESPONSIVE — mobile corrections
+   ============================================================ */
+
+/* Header: stack brand over nav, drop sticky (2 rows eats too much
+   viewport on a phone), tighten type. */
+@media (max-width: 660px) {
+  .site-head { position: static; }
+  .site-head .wrap {
+    flex-direction: column; align-items: flex-start;
+    gap: 0.7rem; padding-block: 0.85rem;
+  }
+  .brand { font-size: 0.95rem; }
+  .site-nav {
+    width: 100%; justify-content: flex-start;
+    gap: 1.15rem; flex-wrap: wrap;
+  }
+  .site-nav a { font-size: 0.66rem; letter-spacing: 0.05em; }
+}
+
+/* Signature exhibit: six columns will not fit a 375px screen.
+   Drop the derived Rate column, shrink inputs, allow scroll as
+   a last-resort fallback. */
+@media (max-width: 640px) {
+  .exhibit { box-shadow: 4px 4px 0 var(--panel); }
+  .exhibit-body { padding: 0.85rem; overflow-x: auto; }
+  table.audit { font-size: 0.72rem; }
+  table.audit th:nth-child(4), table.audit td:nth-child(4) { display: none; }
+  table.audit th { font-size: 0.58rem; padding-right: 0.3rem; }
+  table.audit td { padding-right: 0.3rem; }
+  table.audit input { width: 3.5rem; padding: 0.22rem 0.3rem; }
+  .verdict { font-size: 0.56rem; padding: 0.14rem 0.32rem; }
+  .exhibit-head { font-size: 0.62rem; padding: 0.6rem 0.85rem; }
+  .exhibit-foot { padding: 0.75rem 0.85rem; font-size: 0.64rem; }
+}
+
+/* Hero: tighten the stack so the exhibit is visible sooner */
+@media (max-width: 900px) {
+  .hero { padding-block: 2.2rem 2.5rem; }
+  .hero .lede { max-width: none; margin-top: 1.1rem; }
+  .hero-actions { margin-top: 1.6rem; }
+  .btn { padding: 0.72rem 1.15rem; font-size: 0.85rem; }
+}
+
+/* Cards and prose breathing room on small screens */
+@media (max-width: 560px) {
+  .wrap { padding-inline: 1.15rem; }
+  .card { padding: 1.25rem; }
+  .callout { padding: 1.1rem 1.15rem; }
+  .prose table { font-size: 0.68rem; display: block; overflow-x: auto; }
+  .site-foot .wrap { flex-direction: column; gap: 1.1rem; }
+}
+
+/* Wide data tables on the tracker page */
+.table-scroll { overflow-x: auto; margin: 1.5rem 0; -webkit-overflow-scrolling: touch; }
+.table-scroll table { margin: 0; min-width: 680px; }
+.scroll-hint {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.64rem;
+  color: var(--slate-lt); letter-spacing: 0.08em; text-transform: uppercase;
+  margin: 0 0 0.4rem; display: none;
+}
+@media (max-width: 720px) { .scroll-hint { display: block; } }
+
+/* Status pills for the tracker */
+.pill {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.6rem;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 0.16rem 0.44rem; border-radius: 2px; white-space: nowrap;
+}
+.pill.live { background: #E2F0EA; color: var(--pass); }
+.pill.pending { background: #FBF0DC; color: #8A6100; }
+.pill.uncertain { background: #F7E4E7; color: var(--flag); }
+
+/* ---------- top announcement / CTA bar ---------- */
+.cta-bar {
+  background: var(--indigo); color: #fff;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem; letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--indigo);
+}
+.cta-bar .wrap {
+  display: flex; align-items: center; justify-content: center;
+  gap: 0.85rem; padding-block: 0.62rem; flex-wrap: wrap; text-align: center;
+}
+.cta-bar strong { font-weight: 600; }
+.cta-bar a {
+  color: #fff; text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  padding-bottom: 1px; white-space: nowrap;
+}
+.cta-bar a:hover { color: #fff; border-bottom-color: #fff; }
+.cta-bar .dot { color: rgba(255,255,255,0.45); }
+@media (max-width: 660px) {
+  .cta-bar { font-size: 0.65rem; }
+  .cta-bar .wrap { gap: 0.4rem; padding-block: 0.55rem; line-height: 1.5; }
+  .cta-bar .dot { display: none; }
+}
+
+</style>
+</head>
+<body>
+<div class="cta-bar"><div class="wrap">
+<span><strong>Enforcement tightened in 2026</strong> after the State Comptroller audit of DCWP.</span>
+<span class="dot">&mdash;</span>
+<a href="mailto:hello@greenpointaicompliance.com">Book a free 20-minute scoping call &rarr;</a>
+</div></div>
+<header class="site-head"><div class="wrap">
+<a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span>Greenpoint</a>
+<nav class="site-nav" aria-label="Main">
+<a href="nyc-local-law-144-bias-audit-guide.html">Guide</a>
+<a href="four-fifths-rule-calculator.html">Calculator</a>
+<a href="ai-hiring-laws-by-state.html">State Laws</a>
+<a href="services.html">Services</a>
+<a href="about.html" aria-current="page">About</a>
+</nav></div></header>
+
+<main>
+<section class="page-head"><div class="wrap">
+<span class="eyebrow">About</span>
+<h1>A compliance practice, not a technology vendor</h1>
+<p class="lede">Greenpoint exists because the market for AI governance advice is split between Big Four engagements priced for the Fortune 500 and software that produces a dashboard nobody can defend to a regulator.</p>
+</div></section>
+
+<section class="section" style="border-top:none;padding-top:2.5rem"><div class="wrap"><div class="prose">
+
+<h2 style="margin-top:0">Why an independent auditor and not a platform</h2>
+<p>Local Law 144 requires the auditor to have no financial relationship with the employer or the tool that would compromise independence. A vendor that sells you monitoring software and also audits your tool has a structural problem with that requirement, regardless of how good the software is.</p>
+<p>Greenpoint sells no AI tooling, implements no hiring systems, and has no vendor partnerships. The only product is the audit and the workpapers behind it.</p>
+
+<h2>Background</h2>
+<p>The practice is led by a compliance professional with a JD and a regulatory career in financial services &mdash; marketing and advertising review, AML and KYC, broker-dealer surveillance, and investment adviser compliance across firms including PGIM, Russell Investments and Mutual of Omaha.</p>
+<p>That background matters here for a specific reason. Algorithmic accountability regimes are converging on something financial services has done for decades: maintain an inventory of covered activity, test it on a schedule, document the test, retain the workpapers, and be able to show a regulator the evidence. The mathematics of adverse impact analysis is not new either &mdash; the four-fifths guideline predates machine learning by half a century.</p>
+<p>What is new is that the obligation now attaches to employers who have never run a testing program of any kind. Most of the difficulty is not the statistics. It is building a repeatable process that produces defensible evidence, which is exactly the problem regulated industries solved a long time ago.</p>
+
+<h2>How we work</h2>
+<ul>
+<li><strong>Fixed scope and fixed price.</strong> You should know the cost before the work starts.</li>
+<li><strong>Written determinations.</strong> A conclusion you cannot show to counsel is not useful to you.</li>
+<li><strong>Findings delivered straight.</strong> If a tool produces a failing impact ratio, that appears in the report. The obligation is to calculate and publish, not to arrive at a comfortable number.</li>
+<li><strong>No scope creep by invoice.</strong> If the work is larger than scoped, that is a conversation first.</li>
+</ul>
+
+<h2>Coverage</h2>
+<p>Based in Brooklyn, working with employers nationally. Local Law 144 coverage follows the candidate rather than the employer, so most clients are not New York companies &mdash; they are companies that hire New Yorkers.</p>
+
+</div></div></section>
+
+<section class="cta-band"><div class="wrap">
+<h2>Twenty minutes to find out where you stand.</h2>
+<p>No cost, no proposal attached, and a straight answer about whether you have an obligation.</p>
+<a class="btn btn-solid" href="mailto:hello@greenpointaicompliance.com">hello@greenpointaicompliance.com</a>
+</div></section>
+</main>
+
+<footer class="site-foot"><div class="wrap">
+<div><p><strong>Greenpoint AI Compliance LLC</strong><br>418 Broadway, Ste R<br>Albany, NY 12207</p>
+<p><a href="nyc-local-law-144-bias-audit-guide.html">Guide</a> &middot; <a href="four-fifths-rule-calculator.html">Calculator</a> &middot; <a href="ai-hiring-laws-by-state.html">State Laws</a> &middot; <a href="services.html">Services</a> &middot; <a href="about.html">About</a> &middot; <a href="legal.html">Legal &amp; Privacy</a></p></div>
+<p class="disclaimer">Greenpoint AI Compliance LLC provides regulatory consulting and independent assessment services. Nothing on this site is legal advice, and no attorney&ndash;client relationship is created by using it or by contacting us. See <a href="legal.html">Legal &amp; Privacy</a>.</p>
+</div></footer>
+</body>
+</html>

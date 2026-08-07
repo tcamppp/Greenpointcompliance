@@ -10,6 +10,7 @@
 <meta property="og:title" content="About | Greenpoint AI Compliance">
 <meta property="og:description" content="Independent AI compliance practice in Brooklyn, New York.">
 <meta property="og:url" content="https://greenpointaicompliance.com/about.html">
+<meta property="og:image" content="https://greenpointaicompliance.com/taylor-campbell-square.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Cpath d=%27M0 0h32v25l-7 7H0z%27 fill=%27%231E2A62%27/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -389,6 +390,34 @@ table.audit input:hover { border-color: var(--slate-lt); }
 .pill.pending { background: #FBF0DC; color: #8A6100; }
 .pill.uncertain { background: #F7E4E7; color: var(--flag); }
 
+/* ---------- founder block ---------- */
+.founder {
+  display: grid; grid-template-columns: 220px 1fr;
+  gap: 2rem; align-items: start;
+  margin: 2rem 0 0; padding-top: 1.6rem;
+  border-top: 1px solid var(--rule);
+}
+.founder img {
+  width: 100%; height: auto; display: block;
+  border: 1px solid var(--rule);
+  filter: saturate(0.94);
+}
+.founder .cap {
+  margin: 0.85rem 0 0;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.74rem; line-height: 1.55; color: var(--slate);
+}
+.founder .cap strong {
+  display: block; font-size: 0.86rem; color: var(--ink);
+  letter-spacing: 0.01em; margin-bottom: 0.15rem;
+}
+.founder .bio p { margin: 0 0 1.1rem; }
+.founder .bio p:last-child { margin-bottom: 0; }
+@media (max-width: 700px) {
+  .founder { grid-template-columns: 1fr; gap: 1.4rem; }
+  .founder figure { max-width: 240px; }
+}
+
 /* ---------- top announcement / CTA bar ---------- */
 .cta-bar {
   background: var(--indigo); color: #fff;
@@ -446,7 +475,15 @@ table.audit input:hover { border-color: var(--slate-lt); }
 <p>Greenpoint does not sell AI tooling, does not implement hiring systems, and does not maintain vendor partnerships. The only product is the audit and the workpapers behind it.</p>
 
 <h2>Background</h2>
-<p>Greenpoint was founded by professionals from the technology and finance industries, with regulatory experience at firms including PGIM, Russell Investments and Mutual of Omaha.</p>
+<div class="founder">
+<figure style="margin:0">
+<img src="taylor-campbell.jpg" alt="Taylor Campbell, founder of Greenpoint AI Compliance" width="440" height="525">
+<figcaption class="cap"><strong>Taylor Campbell, JD</strong>Founder</figcaption>
+</figure>
+<div class="bio">
+<p>Greenpoint was founded by Taylor Campbell, a compliance professional with a JD and a regulatory background in financial services &mdash; marketing and advertising review, AML and KYC, broker-dealer surveillance, and investment adviser compliance &mdash; at firms including PGIM, Russell Investments and Mutual of Omaha.</p>
+</div>
+</div>
 <p>That background matters here for a specific reason. Algorithmic accountability regimes are converging on something financial services has done for decades: maintain an inventory of covered activity, test it on a schedule, document the test, retain the workpapers, and be able to show a regulator the evidence. The mathematics of adverse impact analysis is not new either &mdash; the four-fifths guideline predates machine learning by half a century.</p>
 <p>What is new is that the obligation now attaches to employers who have never run a testing program of any kind. Most of the difficulty is not the statistics. It is building a repeatable process that produces defensible evidence, which is exactly the problem regulated industries solved a long time ago.</p>
 

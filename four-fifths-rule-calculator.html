@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Four-Fifths Rule Calculator | Adverse Impact &amp; Selection Rate Analysis</title>
+<meta name="description" content="Free four-fifths rule calculator. Enter selection counts by demographic group to compute selection rates and impact ratios against the EEOC 0.80 adverse impact threshold. Runs entirely in your browser.">
+<link rel="canonical" href="https://greenpointcompliance.com/four-fifths-rule-calculator.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Four-Fifths Rule Calculator | Adverse Impact &amp; Selection Rate Analysis">
+<meta property="og:description" content="Free four-fifths rule calculator. Enter selection counts by demographic group to compute selection rates and impact ratios against the EEOC 0.80 adverse impact threshold. Runs entirely in your browser.">
+<meta property="og:url" content="https://greenpointcompliance.com/four-fifths-rule-calculator.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Cpath d=%27M2 2h20v16l-6 4H2z%27 fill=%27%2314402D%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Libre+Franklin:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Four-Fifths Rule Impact Ratio Calculator",
+"applicationCategory":"BusinessApplication","operatingSystem":"Any","url":"https://greenpointcompliance.com/four-fifths-rule-calculator.html",
+"description":"Free calculator for adverse impact analysis. Enter selection counts by demographic group to compute selection rates and impact ratios against the EEOC four-fifths guideline.",
+"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+"publisher":{"@type":"Organization","name":"Greenpoint AI Compliance LLC"}}
+</script>
+</head>
+<body>
+<div class="cta-bar"><div class="wrap">
+<span><strong>State Comptroller, December 2025:</strong> DCWP flagged 1 of 32 employers reviewed. The Comptroller found 17.</span>
+<span class="dot">&mdash;</span>
+<a href="mailto:hello@greenpointcompliance.com">Book a free scoping call &rarr;</a>
+</div></div>
+<header class="site-head"><div class="wrap">
+<a class="brand" href="index.html"><svg class="mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 2h20v16l-6 4H2z" fill="#14402D"/><path d="M6.5 9.5h11M6.5 13.5h7" stroke="#fff" stroke-width="1.7" stroke-linecap="square"/></svg>Greenpoint</a>
+<nav class="site-nav" aria-label="Main">
+<a href="nyc-local-law-144-bias-audit-guide.html">Guide</a>
+<a href="four-fifths-rule-calculator.html" aria-current="page">Calculator</a>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+</nav></div></header>
+
+<main>
+<section class="page-head"><div class="wrap">
+<span class="eyebrow">Free tool</span>
+<h1>Four-fifths rule calculator</h1>
+<p class="lede">Enter selection counts by group. The calculator returns selection rates, impact ratios against the highest-selected group, and a four-fifths guideline assessment.</p>
+<p class="meta">No signup &middot; nothing is transmitted &middot; all calculation happens in your browser</p>
+</div></section>
+
+<section class="section" style="border-top:none;padding-top:2rem"><div class="wrap">
+<div class="exhibit" style="max-width:780px">
+<div class="exhibit-head"><span>Adverse impact analysis</span><span>Editable</span></div>
+<div class="exhibit-body">
+<p class="eyebrow" style="margin-bottom:0.7rem">Add or remove rows to match your categories</p>
+<div class="audit-scroll"><table class="audit">
+<thead><tr>
+<th scope="col">Group</th><th scope="col">Selected</th><th scope="col">Applicants</th>
+<th scope="col">Rate</th><th scope="col">Ratio</th><th scope="col"><span class="sr-only">Result</span></th>
+</tr></thead>
+<tbody id="rows"></tbody>
+</table></div>
+<div style="display:flex;gap:0.6rem;margin-top:1rem;flex-wrap:wrap">
+<button type="button" class="btn btn-ghost" id="addrow" style="font-size:0.78rem;padding:0.5rem 0.9rem">Add group</button>
+<button type="button" class="btn btn-ghost" id="reset" style="font-size:0.78rem;padding:0.5rem 0.9rem">Reset to example</button>
+</div>
+</div>
+<div class="exhibit-foot" id="verdict-note"></div>
+</div>
+</div></section>
+
+<section class="section"><div class="wrap"><div class="prose">
+<h2 style="margin-top:0">How the calculation works</h2>
+<p>The impact ratio is the simplest defensible measure of whether a selection process treats groups differently. Three steps:</p>
+<ol>
+<li><strong>Selection rate</strong> for each group is the number selected divided by the number of applicants.</li>
+<li><strong>Reference group</strong> is whichever group has the highest selection rate. It becomes the denominator and its own ratio is 1.00 by definition.</li>
+<li><strong>Impact ratio</strong> is each group&#39;s selection rate divided by the reference rate.</li>
+</ol>
+
+<figure class="figure framed">
+<svg viewBox="0 0 1000 260" role="img" aria-labelledby="irT irD" xmlns="http://www.w3.org/2000/svg">
+  <title id="irT">Impact ratios against the four-fifths guideline</title>
+  <desc id="irD">Group A sets the reference rate at 1.00. Group C returns 0.67 and Group B returns 0.60. Both fall below the 0.80 four-fifths guideline.</desc>
+
+  <text x="150" y="28" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" letter-spacing="1.5" fill="var(--slate-lt)">IMPACT RATIO AGAINST THE HIGHEST-SELECTED GROUP</text>
+  <line x1="726.0" y1="42" x2="726.0" y2="202" stroke="var(--flag)" stroke-width="1.3" stroke-dasharray="5 4"/>
+  <text x="736.0" y="198" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12" font-weight="600" fill="var(--flag)">0.80</text>
+  <text x="736.0" y="214" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10.5" fill="var(--flag)">FOUR-FIFTHS</text>
+  <line x1="150" y1="190" x2="870" y2="190" stroke="var(--rule)" stroke-width="1"/>
+  <text x="136" y="77" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12.5" fill="var(--ink)">Group A</text><rect x="150" y="58" width="720.0" height="28" fill="var(--pine)"/><text x="859.0" y="77" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12.5" font-weight="600" fill="#fff">1.00</text><text x="882.0" y="77" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" fill="var(--slate-lt)">rate 30.0%</text>
+  <text x="136" y="129" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12.5" fill="var(--ink)">Group B</text><rect x="150" y="110" width="432.0" height="28" fill="var(--flag)"/><text x="571.0" y="129" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12.5" font-weight="600" fill="#fff">0.60</text><text x="594.0" y="129" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" fill="var(--slate-lt)">rate 18.0%</text>
+  <text x="136" y="181" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12.5" fill="var(--ink)">Group C</text><rect x="150" y="162" width="482.4" height="28" fill="var(--flag)"/><text x="621.4" y="181" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12.5" font-weight="600" fill="#fff">0.67</text><text x="644.4" y="181" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" fill="var(--slate-lt)">rate 20.0%</text>
+  <text x="150" y="246" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" fill="var(--slate)">TWO OF THREE GROUPS FALL BELOW THE GUIDELINE. BOTH FIGURES STILL GET PUBLISHED.</text>
+</svg>
+<figcaption>A worked example. Under the EEOC&#39;s Uniform Guidelines on Employee Selection Procedures, a ratio below four-fifths is generally regarded as evidence of adverse impact. The guideline dates to 1978 and long predates machine learning.</figcaption>
+</figure>
+
+<p>What is new is that automated tools now produce these disparities at scale and, increasingly, that the law requires you to measure and publish them.</p>
+
+<div class="callout">
+<p><strong>A ratio below 0.80 is not automatically illegal.</strong> It is a screening threshold that shifts the analysis toward whether the selection procedure is job-related and consistent with business necessity. Nor does NYC Local Law 144 treat 0.80 as pass-fail. It requires you to calculate and publish the ratios regardless of what they say.</p>
+</div>
+
+<h2>What the calculator does not do</h2>
+<p>This tool computes impact ratios for the categories you enter. A compliant Local Law 144 bias audit requires more:</p>
+<ul>
+<li><strong>Intersectional categories.</strong> Not just sex and race separately, but their combinations. Hispanic women, Black men, and so on. This is where disparities frequently appear that single-axis analysis misses entirely.</li>
+<li><strong>Scoring rate analysis</strong> for tools that produce scores rather than pass-fail outcomes, measured as the proportion of each group scoring above the median.</li>
+<li><strong>Treatment of unknown-category individuals</strong>, which must be counted and disclosed.</li>
+<li><strong>Independence.</strong> An audit you run yourself does not satisfy the statute. The auditor must not hold an employment or financial relationship with you that compromises independence.</li>
+</ul>
+<p>Use this to understand your exposure before commissioning an audit, not as a substitute for one. The <a href="nyc-local-law-144-bias-audit-guide.html">full compliance guide</a> covers what a defensible audit actually requires.</p>
+
+<h2>Statistical significance and small samples</h2>
+<p>Impact ratios computed on small applicant pools are unstable. With twenty applicants in a group, a single hiring decision can move the ratio by 0.15 or more. The Uniform Guidelines acknowledge this, and practitioners typically supplement the ratio with a significance test, either a two-proportion z-test or Fisher&#39;s exact test, when group sizes are small.</p>
+<p>A practical rule: treat ratios computed on fewer than about thirty applicants per group as directional rather than conclusive, and say so in whatever you publish.</p>
+
+<p style="margin-top:2.5rem;font-size:0.86rem;color:var(--slate-lt)">This calculator is provided for general educational use. It is not legal advice and does not constitute a bias audit under NYC Local Law 144 or any other law.</p>
+</div></div></section>
+
+<section class="cta-band"><div class="wrap">
+<h2>Twenty minutes to find out where you stand.</h2>
+<p>No cost, no proposal attached, and a straight answer about whether you have an obligation.</p>
+<a class="btn btn-solid" href="mailto:hello@greenpointcompliance.com">hello@greenpointcompliance.com</a>
+</div></section>
+
+</main>
+<footer class="site-foot"><div class="wrap">
+<div><p><strong>Greenpoint AI Compliance LLC</strong><br>418 Broadway, Ste R<br>Albany, NY 12207</p>
+<p><a href="nyc-local-law-144-bias-audit-guide.html">Guide</a> &middot; <a href="four-fifths-rule-calculator.html">Calculator</a> &middot; <a href="services.html">Services</a> &middot; <a href="about.html">About</a> &middot; <a href="legal.html">Legal &amp; Privacy</a></p></div>
+<p class="disclaimer">Greenpoint AI Compliance LLC provides regulatory consulting and independent assessment services. Nothing on this site is legal advice, and no attorney&ndash;client relationship is created by using it or by contacting us. See <a href="legal.html">Legal &amp; Privacy</a>.</p>
+</div></footer>
+<script>
+(function(){
+  var tbody=document.getElementById('rows'), note=document.getElementById('verdict-note');
+  var DEFAULTS=[['White men',120,400],['Black women',45,250],['Hispanic men',60,300],['Asian women',38,180]];
+  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
+  function rowHTML(name,sel,app){
+    return '<tr>'+
+      '<td><input type="text" class="gname" value="'+esc(name)+'" aria-label="Group name" style="width:7.5rem;text-align:left"></td>'+
+      '<td><input type="number" min="0" class="gsel" value="'+sel+'" aria-label="Selected"></td>'+
+      '<td><input type="number" min="1" class="gapp" value="'+app+'" aria-label="Applicants"></td>'+
+      '<td class="rate">—</td><td class="ratio">—</td><td class="flagcell"></td></tr>';
+  }
+  function build(data){ tbody.innerHTML=data.map(function(d){return rowHTML(d[0],d[1],d[2]);}).join(''); bind(); compute(); }
+  function bind(){ tbody.querySelectorAll('input').forEach(function(i){ i.oninput=compute; }); }
+  function compute(){
+    var trs=[].slice.call(tbody.querySelectorAll('tr')), data=[];
+    trs.forEach(function(tr){
+      var s=parseFloat(tr.querySelector('.gsel').value), a=parseFloat(tr.querySelector('.gapp').value);
+      data.push({tr:tr,rate:(isFinite(s)&&isFinite(a)&&a>0)?s/a:null,
+                 name:tr.querySelector('.gname').value||'Group', n:a});
+    });
+    var best=0; data.forEach(function(d){ if(d.rate!==null&&d.rate>best) best=d.rate; });
+    var fails=[], small=false;
+    data.forEach(function(d){
+      var rc=d.tr.querySelector('.rate'), ic=d.tr.querySelector('.ratio'), fc=d.tr.querySelector('.flagcell');
+      if(d.rate===null||best===0){ rc.textContent='—'; ic.textContent='—'; fc.innerHTML=''; return; }
+      if(d.n<30) small=true;
+      var r=d.rate/best;
+      rc.textContent=(d.rate*100).toFixed(1)+'%';
+      ic.textContent=r.toFixed(2);
+      var bad=r<0.8; if(bad) fails.push(d.name);
+      ic.style.color=bad?'var(--flag)':'var(--ink)';
+      fc.innerHTML='<span class="verdict '+(bad?'fail':'pass')+'">'+(bad?'Below 0.80':'Clears')+'</span>';
+    });
+    var msg;
+    if(fails.length){
+      msg='<strong style="color:var(--flag)">'+fails.length+' group'+(fails.length>1?'s fall':' falls')+
+          ' below 0.80:</strong> '+fails.map(esc).join(', ')+'. Under the EEOC four-fifths guideline this is evidence of adverse impact warranting examination of whether the procedure is job-related and consistent with business necessity.';
+    } else {
+      msg='<strong>All groups clear 0.80.</strong> Impact ratio = each group\'s selection rate divided by the highest group\'s rate.';
+    }
+    if(small) msg+=' <em>At least one group has fewer than 30 applicants. Treat those ratios as directional, not conclusive.</em>';
+    note.innerHTML=msg;
+  }
+  document.getElementById('addrow').onclick=function(){
+    tbody.insertAdjacentHTML('beforeend',rowHTML('New group',0,100)); bind(); compute();
+  };
+  document.getElementById('reset').onclick=function(){ build(DEFAULTS); };
+  build(DEFAULTS);
+})();
+</script>
+</body>
+</html>

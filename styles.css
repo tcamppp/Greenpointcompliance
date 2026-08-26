@@ -1,0 +1,405 @@
+/* ==========================================================
+   Greenpoint Compliance — site stylesheet
+   Palette : ledger ink, paper, pine (the Greenpoint green),
+             crimson + green audit signals
+   Type    : Libre Franklin (display, Franklin Gothic lineage)
+             Newsreader (body, editorial serif)
+             IBM Plex Mono (figures, labels, exhibits)
+   ========================================================== */
+
+:root {
+  --ink:       #11161D;
+  --ink-soft:  #232B35;
+  --slate:     #4A5462;
+  --slate-lt:  #79828F;
+  --paper:     #FCFCFB;
+  --panel:     #F0F2EF;
+  --panel-2:   #E7EBE6;
+  --rule:      #DFE3DE;
+  --pine:      #14402D;
+  --pine-lt:   #1E6344;
+  --pine-tint: #E6EDE8;
+  --flag:      #9E1626;
+  --flag-tint: #F7E5E7;
+  --pass:      #1B6B47;
+  --pass-tint: #E3EFE8;
+  --amber:     #8A6100;
+  --amber-tint:#FAF0DA;
+
+  --maxw: 1160px;
+  --measure: 66ch;
+
+  --s--1: clamp(0.83rem, 0.80rem + 0.12vw, 0.90rem);
+  --s-0:  clamp(1.02rem, 0.98rem + 0.20vw, 1.11rem);
+  --s-1:  clamp(1.21rem, 1.13rem + 0.40vw, 1.46rem);
+  --s-2:  clamp(1.48rem, 1.32rem + 0.78vw, 1.98rem);
+  --s-3:  clamp(1.86rem, 1.56rem + 1.48vw, 2.85rem);
+  --s-4:  clamp(2.30rem, 1.76rem + 2.66vw, 4.15rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Newsreader, Georgia, "Times New Roman", serif;
+  font-size: var(--s-0);
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: -0.021em;
+  line-height: 1.1;
+  margin: 0;
+  font-weight: 700;
+}
+
+a { color: var(--pine); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--pine-lt); }
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--pine); outline-offset: 3px;
+}
+
+.wrap { max-width: var(--maxw); margin-inline: auto; padding-inline: 1.5rem; }
+/* left/top pin the element to its containing block's origin. Without
+   them an absolutely-positioned .sr-only falls back to its static
+   position, which inside a horizontally scrolling table sits past the
+   viewport edge and adds phantom page scroll. */
+.sr-only {
+  position: absolute; left: 0; top: 0;
+  width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); clip-path: inset(50%);
+  white-space: nowrap; border: 0;
+}
+
+/* ---------- label utility ---------- */
+.eyebrow {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--slate-lt); margin: 0 0 0.9rem; display: block;
+}
+
+/* ---------- announcement bar ---------- */
+.cta-bar {
+  background: var(--pine); color: #fff;
+  font-family: "IBM Plex Mono", monospace; font-size: 0.72rem;
+}
+.cta-bar .wrap {
+  display: flex; align-items: center; justify-content: center;
+  gap: 0.85rem; padding-block: 0.65rem; flex-wrap: wrap; text-align: center;
+}
+.cta-bar strong { font-weight: 600; }
+.cta-bar a {
+  color: #fff; text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.5); padding-bottom: 1px; white-space: nowrap;
+}
+.cta-bar a:hover { color: #fff; border-bottom-color: #fff; }
+.cta-bar .dot { color: rgba(255,255,255,0.45); }
+@media (max-width: 660px) {
+  .cta-bar { font-size: 0.66rem; }
+  .cta-bar .wrap { gap: 0.4rem; padding-block: 0.55rem; line-height: 1.5; }
+  .cta-bar .dot { display: none; }
+}
+
+/* ---------- header ---------- */
+.site-head {
+  border-bottom: 1px solid var(--rule); background: var(--paper);
+  position: sticky; top: 0; z-index: 50;
+}
+.site-head .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1.5rem; padding-block: 0.95rem;
+}
+.brand {
+  font-family: "Libre Franklin", sans-serif; font-weight: 700; font-size: 1.05rem;
+  letter-spacing: -0.025em; color: var(--ink); text-decoration: none;
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.brand .mark { width: 24px; height: 24px; flex: none; display: block; }
+.site-nav { display: flex; gap: 1.7rem; align-items: center; }
+.site-nav a {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.75rem;
+  letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--slate); text-decoration: none;
+}
+.site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--ink); }
+.site-nav a[aria-current="page"] { border-bottom: 2px solid var(--pine); padding-bottom: 2px; }
+@media (max-width: 660px) {
+  .site-head { position: static; }
+  .site-head .wrap { flex-direction: column; align-items: flex-start; gap: 0.7rem; padding-block: 0.85rem; }
+  .brand { font-size: 0.97rem; }
+  .site-nav { width: 100%; justify-content: flex-start; gap: 1.2rem; flex-wrap: wrap; }
+  .site-nav a { font-size: 0.68rem; letter-spacing: 0.04em; }
+}
+
+/* ---------- hero ---------- */
+.hero { padding-block: clamp(2.8rem, 6.5vw, 5.5rem) clamp(2.4rem, 5vw, 4.2rem); }
+.hero-grid {
+  display: grid; gap: clamp(2.4rem, 5vw, 3.8rem);
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 1fr); align-items: start;
+}
+@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
+.hero h1 { font-size: var(--s-4); }
+.hero h1 em { font-style: normal; display: block; color: var(--pine); }
+.hero .lede {
+  font-size: var(--s-1); color: var(--slate); max-width: 36ch;
+  margin: 1.5rem 0 0; line-height: 1.44;
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2.1rem; }
+@media (max-width: 900px) {
+  .hero { padding-block: 2.2rem 2.4rem; }
+  .hero .lede { max-width: none; margin-top: 1.1rem; }
+  .hero-actions { margin-top: 1.6rem; }
+}
+
+/* ---------- buttons ---------- */
+.btn {
+  font-family: "Libre Franklin", sans-serif; font-weight: 600; font-size: 0.9rem;
+  padding: 0.8rem 1.4rem; border-radius: 2px; text-decoration: none;
+  border: 1px solid var(--pine); display: inline-block; cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.btn-solid { background: var(--pine); color: #fff; }
+.btn-solid:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+.btn-ghost { background: transparent; color: var(--pine); }
+.btn-ghost:hover { background: var(--pine-tint); color: var(--pine); }
+@media (max-width: 900px) { .btn { padding: 0.72rem 1.15rem; font-size: 0.86rem; } }
+
+/* ---------- exhibit (signature component) ---------- */
+/* position:relative contains the visually-hidden <span>s in the table
+   header; without it they resolve against the root and add a few px
+   of phantom horizontal scroll on narrow screens. */
+.exhibit { position: relative; border: 1px solid var(--ink); background: #fff; box-shadow: 6px 6px 0 var(--panel); }
+.exhibit-head {
+  background: var(--ink); color: #fff; padding: 0.7rem 1.1rem;
+  font-family: "IBM Plex Mono", monospace; font-size: 0.68rem;
+  letter-spacing: 0.11em; text-transform: uppercase;
+  display: flex; justify-content: space-between; gap: 1rem;
+}
+.exhibit-head span:last-child { color: #96A29B; }
+.exhibit-body { padding: 1.1rem; }
+.exhibit-foot {
+  border-top: 1px solid var(--rule); padding: 0.85rem 1.1rem;
+  font-family: "IBM Plex Mono", monospace; font-size: 0.68rem;
+  color: var(--slate); line-height: 1.5;
+}
+.exhibit-foot strong { color: var(--ink); }
+
+table.audit { width: 100%; border-collapse: collapse; font-family: "IBM Plex Mono", monospace; font-size: 0.78rem; }
+table.audit th {
+  text-align: left; font-weight: 600; color: var(--slate-lt);
+  font-size: 0.63rem; letter-spacing: 0.09em; text-transform: uppercase;
+  padding: 0 0.5rem 0.55rem 0; border-bottom: 1px solid var(--rule); white-space: nowrap;
+}
+table.audit th:not(:first-child), table.audit td:not(:first-child) { text-align: right; }
+table.audit td { padding: 0.5rem 0.5rem 0.5rem 0; border-bottom: 1px solid var(--rule); font-variant-numeric: tabular-nums; }
+table.audit tr:last-child td { border-bottom: none; }
+table.audit input {
+  width: 5.2rem; font: inherit; text-align: right; border: 1px solid var(--rule);
+  background: var(--paper); padding: 0.25rem 0.4rem; border-radius: 2px; color: var(--ink);
+}
+table.audit input:hover { border-color: var(--slate-lt); }
+.ratio { font-weight: 600; }
+.verdict {
+  font-size: 0.61rem; letter-spacing: 0.09em; text-transform: uppercase;
+  padding: 0.16rem 0.44rem; border-radius: 2px; white-space: nowrap;
+}
+.verdict.fail { background: var(--flag-tint); color: var(--flag); }
+.verdict.pass { background: var(--pass-tint); color: var(--pass); }
+@media (max-width: 640px) {
+  .exhibit { box-shadow: 4px 4px 0 var(--panel); }
+  .exhibit-body { padding: 0.85rem; }
+  table.audit { font-size: 0.72rem; }
+  table.audit th:nth-child(4), table.audit td:nth-child(4) { display: none; }
+  table.audit th { font-size: 0.57rem; padding-right: 0.3rem; }
+  table.audit td { padding-right: 0.3rem; }
+  table.audit input { width: 3.5rem; padding: 0.22rem 0.3rem; }
+  .verdict { font-size: 0.55rem; padding: 0.14rem 0.32rem; }
+  .exhibit-head { font-size: 0.61rem; padding: 0.6rem 0.85rem; }
+  .exhibit-foot { padding: 0.75rem 0.85rem; font-size: 0.64rem; }
+}
+
+/* ---------- sections ---------- */
+.section { padding-block: clamp(3rem, 6vw, 5.2rem); border-top: 1px solid var(--rule); }
+.section.tint { background: var(--panel); }
+.section-title { font-size: var(--s-3); max-width: 21ch; }
+.section-intro { color: var(--slate); max-width: var(--measure); margin-top: 1.1rem; }
+
+/* ---------- numbered steps ---------- */
+.steps { list-style: none; padding: 0; margin: 2.6rem 0 0; display: grid; gap: 0; }
+.steps li { display: grid; grid-template-columns: 4.5rem 1fr; gap: 1.5rem; padding: 1.6rem 0; border-top: 1px solid var(--rule); }
+.steps li:last-child { border-bottom: 1px solid var(--rule); }
+.steps .num { font-family: "IBM Plex Mono", monospace; font-size: 0.72rem; color: var(--pine); letter-spacing: 0.1em; padding-top: 0.4rem; }
+.steps h3 { font-size: var(--s-1); margin-bottom: 0.5rem; }
+.steps p { margin: 0; color: var(--slate); max-width: var(--measure); }
+@media (max-width: 620px) { .steps li { grid-template-columns: 1fr; gap: 0.5rem; } }
+
+/* ---------- cards ---------- */
+.cards { display: grid; gap: 1.25rem; margin-top: 2.6rem; grid-template-columns: repeat(3, 1fr); }
+.cards.two { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 880px) { .cards, .cards.two { grid-template-columns: 1fr; } }
+.card { border: 1px solid var(--rule); background: #fff; padding: 1.6rem; display: flex; flex-direction: column; }
+.card h3 { font-size: var(--s-1); margin-bottom: 0.7rem; }
+.card p { color: var(--slate); margin: 0 0 1.2rem; font-size: 0.97rem; }
+.card p:last-child { margin-bottom: 0; }
+.card .price {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.82rem; color: var(--ink);
+  border-top: 1px solid var(--rule); padding-top: 0.9rem; margin-top: auto;
+}
+.card .price span { display: block; color: var(--slate-lt); font-size: 0.7rem; margin-top: 0.25rem; }
+.card .icon { display: block; margin-bottom: 1.1rem; }
+@media (max-width: 560px) { .card { padding: 1.25rem; } }
+
+/* ---------- callout ---------- */
+.callout { border-left: 3px solid var(--pine); background: var(--panel); padding: 1.3rem 1.5rem; margin: 2rem 0; max-width: var(--measure); }
+.callout p { margin: 0; }
+.callout p + p { margin-top: 0.8rem; }
+.callout.flagged { border-left-color: var(--flag); background: var(--flag-tint); }
+@media (max-width: 560px) { .callout { padding: 1.1rem 1.15rem; } }
+
+/* ---------- prose ---------- */
+.prose { max-width: var(--measure); }
+.prose h2 { font-size: var(--s-2); margin: 3rem 0 1rem; }
+.prose h3 { font-size: var(--s-1); margin: 2.2rem 0 0.7rem; }
+.prose p { margin: 0 0 1.1rem; }
+.prose ul, .prose ol { margin: 0 0 1.3rem; padding-left: 1.3rem; }
+.prose li { margin-bottom: 0.5rem; }
+.prose table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-family: "IBM Plex Mono", monospace; font-size: 0.78rem; }
+.prose table th {
+  text-align: left; background: var(--panel); padding: 0.6rem 0.7rem;
+  font-size: 0.65rem; letter-spacing: 0.07em; text-transform: uppercase; border: 1px solid var(--rule);
+}
+.prose table td { padding: 0.6rem 0.7rem; border: 1px solid var(--rule); }
+@media (max-width: 560px) { .prose table { font-size: 0.68rem; display: block; overflow-x: auto; } }
+
+.toc { border: 1px solid var(--rule); background: #fff; padding: 1.3rem 1.5rem; margin: 2rem 0 2.5rem; }
+.toc p {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.68rem; letter-spacing: 0.11em;
+  text-transform: uppercase; color: var(--slate-lt); margin: 0 0 0.8rem;
+}
+.toc ol { margin: 0; padding-left: 1.2rem; }
+.toc li { margin-bottom: 0.35rem; font-size: 0.95rem; }
+
+/* ---------- interior page header ---------- */
+.page-head { padding-block: clamp(2.6rem, 5.5vw, 4.2rem) 0; }
+.page-head h1 { font-size: var(--s-3); max-width: 23ch; }
+.page-head .lede { color: var(--slate); max-width: var(--measure); margin-top: 1.2rem; font-size: var(--s-1); line-height: 1.44; }
+.meta { font-family: "IBM Plex Mono", monospace; font-size: 0.7rem; color: var(--slate-lt); margin-top: 1.5rem; letter-spacing: 0.03em; }
+
+/* ---------- figure / graphic frame ---------- */
+.figure { margin: 2.6rem 0 0; }
+.figure svg { display: block; width: 100%; height: auto; }
+.figure figcaption {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.68rem; color: var(--slate-lt);
+  line-height: 1.55; margin-top: 0.85rem; letter-spacing: 0.01em; max-width: 62ch;
+}
+.figure.framed { border: 1px solid var(--rule); background: #fff; padding: 1.5rem; }
+.figure.framed figcaption { margin-top: 1.1rem; padding-top: 0.9rem; border-top: 1px solid var(--rule); }
+/* Diagrams read badly when squeezed to the 66ch reading measure, so
+   they break out to a wider column while staying inside .wrap. */
+.prose > .figure {
+  margin: 2.2rem 0;
+  width: min(880px, calc(100vw - 3rem));
+  max-width: none;
+}
+
+/* ---------- Q&A / disclosure ---------- */
+.qa { border-top: 1px solid var(--rule); margin-top: 2.6rem; }
+.qa details { border-bottom: 1px solid var(--rule); }
+.qa summary {
+  cursor: pointer; list-style: none; padding: 1.15rem 2.2rem 1.15rem 0; position: relative;
+  font-family: "Libre Franklin", sans-serif; font-weight: 600; font-size: 1.02rem;
+  letter-spacing: -0.012em; color: var(--ink);
+}
+.qa summary::-webkit-details-marker { display: none; }
+.qa summary::after {
+  content: ""; position: absolute; right: 0.3rem; top: 1.5rem;
+  width: 9px; height: 9px; border-right: 1.5px solid var(--pine); border-bottom: 1.5px solid var(--pine);
+  transform: rotate(45deg); transition: transform 0.18s ease;
+}
+.qa details[open] summary::after { transform: rotate(-135deg); top: 1.75rem; }
+.qa summary:hover { color: var(--pine); }
+.qa .answer { padding: 0 2.2rem 1.4rem 0; color: var(--slate); max-width: var(--measure); }
+.qa .answer p { margin: 0 0 0.9rem; }
+.qa .answer p:last-child { margin-bottom: 0; }
+
+/* ---------- audit-question ledger (the six questions) ---------- */
+.ledger { margin-top: 2.6rem; border-top: 1px solid var(--rule); }
+.ledger-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 2.5rem; padding: 1.5rem 0; border-bottom: 1px solid var(--rule); align-items: start; }
+.ledger-row .q { font-family: "Libre Franklin", sans-serif; font-weight: 600; font-size: 1.02rem; letter-spacing: -0.012em; margin: 0; }
+.ledger-row .a { margin: 0; color: var(--slate); font-size: 0.97rem; }
+.ledger-row .a .tag {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.6rem; letter-spacing: 0.09em;
+  text-transform: uppercase; background: var(--pass-tint); color: var(--pass);
+  padding: 0.16rem 0.44rem; border-radius: 2px; margin-right: 0.55rem; white-space: nowrap;
+}
+@media (max-width: 780px) { .ledger-row { grid-template-columns: 1fr; gap: 0.7rem; } }
+
+/* ---------- stat band ---------- */
+.stat-band { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin-top: 2.6rem; }
+.stat-band > div { background: var(--paper); padding: 1.5rem 1.4rem; }
+.section.tint .stat-band > div { background: var(--panel); }
+.stat-band .n { font-family: "Libre Franklin", sans-serif; font-weight: 700; font-size: var(--s-3); letter-spacing: -0.03em; line-height: 1; color: var(--pine); display: block; }
+.stat-band .n.flag { color: var(--flag); }
+.stat-band .l { font-family: "IBM Plex Mono", monospace; font-size: 0.68rem; color: var(--slate); line-height: 1.55; margin: 0.7rem 0 0; }
+@media (max-width: 760px) { .stat-band { grid-template-columns: 1fr; } }
+
+/* ---------- founder block ---------- */
+.founder { display: grid; grid-template-columns: 220px 1fr; gap: 2rem; align-items: start; margin: 2rem 0 0; padding-top: 1.6rem; border-top: 1px solid var(--rule); }
+.founder img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); filter: saturate(0.94); }
+.founder .cap { margin: 0.85rem 0 0; font-family: "IBM Plex Mono", monospace; font-size: 0.73rem; line-height: 1.55; color: var(--slate); }
+.founder .cap strong { display: block; font-size: 0.86rem; color: var(--ink); letter-spacing: 0.01em; margin-bottom: 0.15rem; }
+.founder .bio p { margin: 0 0 1.1rem; }
+.founder .bio p:last-child { margin-bottom: 0; }
+@media (max-width: 700px) { .founder { grid-template-columns: 1fr; gap: 1.4rem; } .founder figure { max-width: 240px; } }
+
+/* ---------- CTA band ---------- */
+.cta-band { background: var(--ink); color: #fff; padding-block: clamp(3rem, 6vw, 4.4rem); }
+.cta-band h2 { font-size: var(--s-2); max-width: 21ch; color: #fff; }
+.cta-band p { color: #A7B0AB; max-width: 52ch; margin: 1.1rem 0 2rem; }
+.cta-band .btn-solid { background: #fff; color: var(--ink); border-color: #fff; }
+.cta-band .btn-solid:hover { background: var(--pine-lt); border-color: var(--pine-lt); color: #fff; }
+
+/* ---------- footer ---------- */
+.site-foot { border-top: 1px solid var(--rule); padding-block: 2.5rem; font-size: 0.86rem; color: var(--slate); }
+.site-foot .wrap { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between; }
+.site-foot a { color: var(--slate); }
+.site-foot .disclaimer { max-width: 46ch; font-size: 0.79rem; color: var(--slate-lt); }
+@media (max-width: 560px) { .wrap { padding-inline: 1.15rem; } .site-foot .wrap { flex-direction: column; gap: 1.1rem; } }
+
+/* ---------- plain numbered question list ---------- */
+.q-list { list-style: none; counter-reset: q; padding: 0; margin: 2.4rem 0 0; max-width: 74ch; }
+.q-list li {
+  counter-increment: q; position: relative; padding: 1.05rem 0 1.05rem 3.2rem;
+  border-top: 1px solid var(--rule); font-size: 1.02rem; line-height: 1.5;
+}
+.q-list li:last-child { border-bottom: 1px solid var(--rule); }
+.q-list li::before {
+  content: counter(q, decimal-leading-zero); position: absolute; left: 0; top: 1.2rem;
+  font-family: "IBM Plex Mono", monospace; font-size: 0.72rem; letter-spacing: 0.08em; color: var(--pine);
+}
+.q-list li strong { font-weight: 400; }
+.section.tint .q-list li { border-color: var(--panel-2); }
+
+/* ---------- inline link row ---------- */
+.more {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.76rem; letter-spacing: 0.05em;
+  text-transform: uppercase; margin-top: 1.8rem; display: inline-block;
+}
+
+/* ---------- table scroller inside an exhibit ----------
+   Scrolling the table alone (rather than the whole exhibit body) keeps
+   the surrounding controls fixed and stops the table's intrinsic width
+   leaking into the document's scroll area on narrow screens. */
+.audit-scroll { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.audit-scroll > table.audit { min-width: 0; }

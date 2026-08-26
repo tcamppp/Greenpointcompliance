@@ -1,0 +1,15 @@
+<svg viewBox="0 0 1000 262" role="img" aria-labelledby="indT indD" xmlns="http://www.w3.org/2000/svg">
+  <title id="indT">What independence excludes</title>
+  <desc id="indD">The audit and its workpapers sit inside the practice. Selling AEDT software, implementing hiring systems, vendor referral fees, and fees tied to findings all sit outside it.</desc>
+
+  <text x="500" y="28" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" letter-spacing="1.5" fill="var(--slate-lt)">EVERYTHING ELSE IS OUT OF BOUNDS</text>
+  <rect x="360" y="66" width="280" height="130" fill="var(--pine-tint)" stroke="var(--pine)" stroke-width="1.8"/>
+  <text x="500" y="114" text-anchor="middle" font-family="Libre Franklin, Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" fill="var(--pine)">The audit</text>
+  <text x="500" y="142" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" letter-spacing="1.2" fill="var(--pine)">AND THE WORKPAPERS</text>
+  <text x="500" y="162" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" letter-spacing="1.2" fill="var(--pine)">BEHIND IT</text>
+  <rect x="24" y="52" width="286" height="54" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2" stroke-dasharray="5 4"/><g stroke="var(--flag)" stroke-width="2" stroke-linecap="round"><line x1="44" y1="73" x2="56" y2="85"/><line x1="56" y1="73" x2="44" y2="85"/></g><text x="70" y="84" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12.5" fill="var(--slate)">Selling AEDT software</text>
+  <rect x="24" y="156" width="286" height="54" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2" stroke-dasharray="5 4"/><g stroke="var(--flag)" stroke-width="2" stroke-linecap="round"><line x1="44" y1="177" x2="56" y2="189"/><line x1="56" y1="177" x2="44" y2="189"/></g><text x="70" y="188" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12.5" fill="var(--slate)">Implementing hiring systems</text>
+  <rect x="690" y="52" width="286" height="54" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2" stroke-dasharray="5 4"/><g stroke="var(--flag)" stroke-width="2" stroke-linecap="round"><line x1="710" y1="73" x2="722" y2="85"/><line x1="722" y1="73" x2="710" y2="85"/></g><text x="736" y="84" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12.5" fill="var(--slate)">Vendor referral fees</text>
+  <rect x="690" y="156" width="286" height="54" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2" stroke-dasharray="5 4"/><g stroke="var(--flag)" stroke-width="2" stroke-linecap="round"><line x1="710" y1="177" x2="722" y2="189"/><line x1="722" y1="177" x2="710" y2="189"/></g><text x="736" y="188" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12.5" fill="var(--slate)">Fees tied to findings</text>
+  <text x="500" y="250" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" fill="var(--slate)">NO PRODUCT TO CROSS-SELL MEANS NO INTEREST IN WHAT THE NUMBERS SAY.</text>
+</svg>

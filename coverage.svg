@@ -1,0 +1,30 @@
+<svg viewBox="0 0 1000 300" role="img" aria-labelledby="covT covD" xmlns="http://www.w3.org/2000/svg">
+  <title id="covT">Coverage follows the candidate, not the company</title>
+  <desc id="covD">An employer headquartered outside New York, screening a pool of applicants, is covered by Local Law 144 for the evaluation of any applicant located in New York City.</desc>
+  <defs>
+    <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="var(--slate-lt)"/>
+    </marker>
+  </defs>
+
+  <text x="24" y="30" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" letter-spacing="1.5" fill="var(--slate-lt)">THE EMPLOYER</text>
+  <rect x="24" y="52" width="300" height="104" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+  <text x="52" y="92" font-family="Libre Franklin, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="600" fill="var(--ink)">Headquarters</text>
+  <text x="52" y="116" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12.5" fill="var(--slate)">Anywhere</text>
+  <text x="52" y="136" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12.5" fill="var(--slate-lt)">Not the test</text>
+
+  <rect x="24" y="176" width="300" height="76" fill="var(--panel)" stroke="var(--rule)" stroke-width="1.2"/>
+  <text x="52" y="208" font-family="Libre Franklin, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="var(--ink)">Screening tool</text>
+  <text x="52" y="232" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12.5" fill="var(--slate)">One AEDT, one posting</text>
+
+  <path d="M336 158 L546 158" stroke="var(--slate-lt)" stroke-width="1.5" marker-end="url(#arw)"/>
+
+  <text x="560" y="30" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" letter-spacing="1.5" fill="var(--slate-lt)">THE APPLICANT POOL</text>
+  <rect x="560" y="52" width="400" height="214" fill="none" stroke="var(--rule)" stroke-width="1.2"/>
+  <rect x="582" y="68" width="356" height="30" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/><circle cx="602" cy="83" r="5.5" fill="var(--slate)" opacity="0.4"/><text x="620" y="88" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12.5" font-weight="400" fill="var(--slate)">Denver</text>
+  <rect x="582" y="108" width="356" height="30" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/><circle cx="602" cy="123" r="5.5" fill="var(--slate)" opacity="0.4"/><text x="620" y="128" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12.5" font-weight="400" fill="var(--slate)">Austin</text>
+  <rect x="582" y="148" width="356" height="30" fill="var(--flag-tint)" stroke="var(--flag)" stroke-width="1.2"/><circle cx="602" cy="163" r="5.5" fill="var(--flag)" opacity="1"/><text x="620" y="168" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12.5" font-weight="600" fill="var(--flag)">Queens, NY</text>
+  <rect x="582" y="188" width="356" height="30" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/><circle cx="602" cy="203" r="5.5" fill="var(--slate)" opacity="0.4"/><text x="620" y="208" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12.5" font-weight="400" fill="var(--slate)">Chicago</text>
+  <text x="582" y="236" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" fill="var(--flag)">ONE NYC APPLICANT PUTS THAT</text>
+  <text x="582" y="253" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" fill="var(--flag)">EVALUATION IN SCOPE.</text>
+</svg>

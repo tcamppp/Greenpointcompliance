@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NYC Local Law 144 Bias Audits | Greenpoint Compliance</title>
+<meta name="description" content="Independent bias audits for automated employment decision tools under NYC Local Law 144. Fixed-price engagements, audit-ready workpapers, and a free four-fifths rule calculator.">
+<link rel="canonical" href="https://greenpointcompliance.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NYC Local Law 144 Bias Audits | Greenpoint Compliance">
+<meta property="og:description" content="Independent bias audits for automated employment decision tools under NYC Local Law 144. Fixed-price engagements, audit-ready workpapers, and a free four-fifths rule calculator.">
+<meta property="og:url" content="https://greenpointcompliance.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Cpath d=%27M2 2h20v16l-6 4H2z%27 fill=%27%2314402D%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Libre+Franklin:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService",
+"name":"Greenpoint AI Compliance LLC",
+"description":"Independent bias audits for automated employment decision tools under New York City Local Law 144.",
+"url":"https://greenpointcompliance.com/","email":"hello@greenpointcompliance.com",
+"address":{"@type":"PostalAddress","streetAddress":"418 Broadway, Ste R","addressLocality":"Albany","addressRegion":"NY","postalCode":"12207","addressCountry":"US"},
+"areaServed":{"@type":"City","name":"New York City"},
+"knowsAbout":["NYC Local Law 144","Automated Employment Decision Tools","Algorithmic bias auditing","Adverse impact analysis","Four-fifths rule"],
+"serviceType":"Independent bias audit"}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Who has to comply with Local Law 144?", "acceptedAnswer": {"@type": "Answer", "text": "Employers and employment agencies that use an automated employment decision tool to substantially assist or replace discretionary decision-making in hiring or promotion, where the candidate or employee is located in New York City. The test is where the candidate sits, not where the company is headquartered. A fully remote company with one applicant in the five boroughs is covered for that evaluation."}}, {"@type": "Question", "name": "How often does the audit have to be done?", "acceptedAnswer": {"@type": "Answer", "text": "The audit must have been conducted no more than one year before the tool is used. That makes it a recurring obligation rather than a one-time clearance, and it is the requirement employers most often miss after the first year."}}, {"@type": "Question", "name": "What is the four-fifths rule?", "acceptedAnswer": {"@type": "Answer", "text": "An impact ratio compares each demographic group's selection rate against the rate of the most-selected group. Under the EEOC's four-fifths guideline, a ratio below 0.80 is treated as evidence of adverse impact warranting further examination. Local Law 144 requires those ratios to be calculated and published. It does not itself make 0.80 a pass-fail line."}}, {"@type": "Question", "name": "Is a failing impact ratio a violation?", "acceptedAnswer": {"@type": "Answer", "text": "Not of Local Law 144. The statute requires you to calculate and publish, not to pass. The same figure is squarely relevant under Title VII, the New York City Human Rights Law and the New York State Human Rights Law, where the exposure is class litigation rather than a per-day penalty. Publishing a bad number is required. Not publishing it is the violation."}}, {"@type": "Question", "name": "Who qualifies as an independent auditor?", "acceptedAnswer": {"@type": "Answer", "text": "A person or firm not involved in using, developing or distributing the tool, and holding no employment or financial relationship with the employer that would compromise independence. DCWP maintains no approved auditor list, so the selection is the employer's responsibility and the employer's risk."}}, {"@type": "Question", "name": "Can our AEDT vendor perform the audit?", "acceptedAnswer": {"@type": "Answer", "text": "A vendor auditing its own tool, or paying the party that does, is the arrangement most likely to fail the independence requirement. It is also the most common one in the market. Ask the six questions on this page of anyone you are considering."}}, {"@type": "Question", "name": "What has to be published, and for how long?", "acceptedAnswer": {"@type": "Answer", "text": "A summary of the most recent bias audit, publicly available on your website, covering the source and explanation of the data used, the number of individuals assessed who fall into unknown categories, and the selection or scoring rates and impact ratios for every required category. The distribution date of the tool goes alongside it. The summary must stay posted for at least six months after the tool's most recent use."}}, {"@type": "Question", "name": "What are the penalties?", "acceptedAnswer": {"@type": "Answer", "text": "Between $500 and $1,500 per violation, and each day a violation continues is treated as a separate violation. Failing to conduct the audit, failing to publish the summary and failing to give notice are each independently actionable."}}, {"@type": "Question", "name": "What if we have never collected demographic data?", "acceptedAnswer": {"@type": "Answer", "text": "The rules address this. Where historical data is insufficient, test data may be substituted, and that substitution carries its own disclosure requirement. Reconstructing or substituting data is one of the main things that moves the cost of an engagement."}}, {"@type": "Question", "name": "We are not sure any of our tools count as AEDTs. Where do we start?", "acceptedAnswer": {"@type": "Answer", "text": "With an inventory rather than an audit. Every system touching hiring, screening, ranking, assessment or promotion gets the AEDT definition applied to it in writing. That is what the exposure review produces, and roughly a third of them conclude that nothing in the stack meets the definition."}}]}</script>
+</head>
+<body>
+<div class="cta-bar"><div class="wrap">
+<span><strong>State Comptroller, December 2025:</strong> DCWP flagged 1 of 32 employers reviewed. The Comptroller found 17.</span>
+<span class="dot">&mdash;</span>
+<a href="mailto:hello@greenpointcompliance.com">Book a free scoping call &rarr;</a>
+</div></div>
+<header class="site-head"><div class="wrap">
+<a class="brand" href="index.html"><svg class="mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 2h20v16l-6 4H2z" fill="#14402D"/><path d="M6.5 9.5h11M6.5 13.5h7" stroke="#fff" stroke-width="1.7" stroke-linecap="square"/></svg>Greenpoint</a>
+<nav class="site-nav" aria-label="Main">
+<a href="nyc-local-law-144-bias-audit-guide.html">Guide</a>
+<a href="four-fifths-rule-calculator.html">Calculator</a>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+</nav></div></header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">NYC Local Law 144 &middot; Automated Employment Decision Tools</span>
+      <h1>Your hiring tool needs an audit.<em>Most employers fail the math, not the law.</em></h1>
+      <p class="lede">Independent bias audits for employers running automated screening on New York City candidates. Fixed price, agreed before the work starts, and documentation that holds up when somebody asks to see it.</p>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="services.html">See engagements &amp; pricing</a>
+        <a class="btn btn-ghost" href="nyc-local-law-144-bias-audit-guide.html">Read the compliance guide</a>
+      </div>
+    </div>
+
+    <div class="exhibit" id="calculator">
+      <div class="exhibit-head">
+        <span>Exhibit A &middot; Impact ratio</span>
+        <span>Editable</span>
+      </div>
+      <div class="exhibit-body">
+        <p class="eyebrow" style="margin-bottom:0.7rem">Selection rate by group &middot; enter your own numbers</p>
+        <div class="audit-scroll"><table class="audit">
+          <caption class="sr-only">Four-fifths rule impact ratio calculator</caption>
+          <thead>
+            <tr>
+              <th scope="col">Group</th><th scope="col">Selected</th><th scope="col">Applicants</th>
+              <th scope="col">Rate</th><th scope="col">Ratio</th><th scope="col"><span class="sr-only">Result</span></th>
+            </tr>
+          </thead>
+          <tbody id="rows">
+            <tr><td>Group A</td>
+              <td><input type="number" min="0" value="120" aria-label="Group A selected"></td>
+              <td><input type="number" min="1" value="400" aria-label="Group A applicants"></td>
+              <td class="rate">&mdash;</td><td class="ratio">&mdash;</td><td class="flagcell"></td></tr>
+            <tr><td>Group B</td>
+              <td><input type="number" min="0" value="45" aria-label="Group B selected"></td>
+              <td><input type="number" min="1" value="250" aria-label="Group B applicants"></td>
+              <td class="rate">&mdash;</td><td class="ratio">&mdash;</td><td class="flagcell"></td></tr>
+            <tr><td>Group C</td>
+              <td><input type="number" min="0" value="60" aria-label="Group C selected"></td>
+              <td><input type="number" min="1" value="300" aria-label="Group C applicants"></td>
+              <td class="rate">&mdash;</td><td class="ratio">&mdash;</td><td class="flagcell"></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div class="exhibit-foot" id="verdict-note">
+        <strong>Impact ratio</strong> = each group&#39;s selection rate divided by the highest group&#39;s rate. Under the EEOC four-fifths guideline, below <strong>0.80</strong> is treated as evidence of adverse impact.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section tint">
+  <div class="wrap">
+    <span class="eyebrow">What changed</span>
+    <h2 class="section-title">The cheap period is over.</h2>
+    <p class="section-intro">On 2 December 2025 the New York State Comptroller published an audit of how the Department of Consumer and Worker Protection enforces Local Law 144. Its reviewers looked at the same 32 companies DCWP had already looked at, and reached a very different conclusion.</p>
+
+    <figure class="figure">
+      <svg viewBox="0 0 1000 250" role="img" aria-labelledby="gapT gapD" xmlns="http://www.w3.org/2000/svg">
+  <title id="gapT">DCWP&#8217;s review versus the Comptroller&#8217;s review of the same 32 companies</title>
+  <desc id="gapD">Of 32 companies&#8217; bias audits and websites reviewed, DCWP identified one instance of non-compliance. The State Comptroller, reviewing the same 32, identified at least 17 instances of potential non-compliance.</desc>
+
+  <text x="0" y="12" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" letter-spacing="1.5" fill="var(--slate-lt)">DCWP&#8217;S OWN REVIEW OF 32 COMPANIES</text>
+  <text x="664" y="12" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" letter-spacing="1.5" fill="var(--slate-lt)">1 FLAGGED</text>
+  <g transform="translate(0,26)">
+    <rect x="0" y="0" width="34" height="34" fill="var(--flag)"/>
+    <rect x="42" y="0" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="84" y="0" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="126" y="0" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="168" y="0" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="210" y="0" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="252" y="0" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="294" y="0" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="336" y="0" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="378" y="0" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="420" y="0" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="462" y="0" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="504" y="0" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="546" y="0" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="588" y="0" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="630" y="0" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="0" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="42" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="84" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="126" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="168" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="210" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="252" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="294" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="336" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="378" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="420" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="462" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="504" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="546" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="588" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="630" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+  </g>
+
+  <line x1="0" y1="128" x2="664" y2="128" stroke="var(--rule)" stroke-width="1"/>
+
+  <text x="0" y="154" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" letter-spacing="1.5" fill="var(--slate-lt)">THE COMPTROLLER&#8217;S REVIEW OF THE SAME 32</text>
+  <text x="664" y="154" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" letter-spacing="1.5" font-weight="600" fill="var(--flag)">17 FLAGGED</text>
+  <g transform="translate(0,168)">
+    <rect x="0" y="0" width="34" height="34" fill="var(--flag)"/>
+    <rect x="42" y="0" width="34" height="34" fill="var(--flag)"/>
+    <rect x="84" y="0" width="34" height="34" fill="var(--flag)"/>
+    <rect x="126" y="0" width="34" height="34" fill="var(--flag)"/>
+    <rect x="168" y="0" width="34" height="34" fill="var(--flag)"/>
+    <rect x="210" y="0" width="34" height="34" fill="var(--flag)"/>
+    <rect x="252" y="0" width="34" height="34" fill="var(--flag)"/>
+    <rect x="294" y="0" width="34" height="34" fill="var(--flag)"/>
+    <rect x="336" y="0" width="34" height="34" fill="var(--flag)"/>
+    <rect x="378" y="0" width="34" height="34" fill="var(--flag)"/>
+    <rect x="420" y="0" width="34" height="34" fill="var(--flag)"/>
+    <rect x="462" y="0" width="34" height="34" fill="var(--flag)"/>
+    <rect x="504" y="0" width="34" height="34" fill="var(--flag)"/>
+    <rect x="546" y="0" width="34" height="34" fill="var(--flag)"/>
+    <rect x="588" y="0" width="34" height="34" fill="var(--flag)"/>
+    <rect x="630" y="0" width="34" height="34" fill="var(--flag)"/>
+    <rect x="0" y="42" width="34" height="34" fill="var(--flag)"/>
+    <rect x="42" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="84" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="126" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="168" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="210" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="252" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="294" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="336" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="378" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="420" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="462" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="504" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="546" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="588" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+    <rect x="630" y="42" width="34" height="34" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.2"/>
+  </g>
+</svg>
+      <figcaption>Office of the New York State Comptroller, report 2024-N-6, covering July 2023 through June 2025. DCWP identified one instance of non-compliance across the 32 companies it reviewed. The Comptroller identified at least 17 instances of potential non-compliance in the same set.</figcaption>
+    </figure>
+
+    <div class="stat-band">
+      <div><span class="n flag">17</span><p class="l">Instances of potential non-compliance the Comptroller found among companies DCWP had cleared</p></div>
+      <div><span class="n">2</span><p class="l">AEDT complaints DCWP received across the entire two-year audit period</p></div>
+      <div><span class="n flag">75%</span><p class="l">Of test calls to 311 about AEDT issues were routed somewhere other than DCWP</p></div>
+    </div>
+
+    <div class="callout" style="margin-top:2.4rem">
+      <p><strong>What DCWP agreed to do about it.</strong> The department concurred with the findings and committed to fixing complaint routing, cross-training staff, writing consistent complaint-handling policies, and interviewing employers about their tools rather than waiting for someone to file a complaint.</p>
+      <p>Enforcement between 2023 and 2025 was complaint-driven and thin. Two complaints in two years is not a compliance record. It is a measurement failure, and it has now been measured.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">What the law requires</span>
+    <h2 class="section-title">Three obligations, in order. Missing any one is a violation.</h2>
+    <ol class="steps">
+      <li><span class="num">01</span><div>
+        <h3>Audit before use</h3>
+        <p>An independent bias audit conducted no more than one year before the tool is used, covering selection or scoring rates by sex, by race and ethnicity, and by their intersections.</p>
+      </div></li>
+      <li><span class="num">02</span><div>
+        <h3>Publish the summary</h3>
+        <p>A summary of the most recent audit posted publicly on your website, with the distribution date of the tool. It stays up for at least six months after the tool&#39;s last use. The opt-out instructions belong here too.</p>
+      </div></li>
+      <li><span class="num">03</span><div>
+        <h3>Notify candidates</h3>
+        <p>At least ten business days before use, naming the job qualifications and characteristics the tool assesses, with a route to request an alternative process that is actually available rather than theoretical.</p>
+      </div></li>
+    </ol>
+
+    <figure class="figure framed" style="margin-top:3rem">
+      <svg viewBox="0 0 1000 210" role="img" aria-labelledby="winT winD" xmlns="http://www.w3.org/2000/svg">
+  <title id="winT">The twelve-month audit validity window</title>
+  <desc id="winD">A bias audit is valid for twelve months from the date it is conducted. Every use of the tool must fall inside that window, which makes the audit an annual obligation rather than a one-time clearance.</desc>
+  <defs>
+    <pattern id="lapsed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="var(--flag)" stroke-width="1.8" opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <text x="96" y="36" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" letter-spacing="1.5" fill="var(--pass)">TOOL MAY BE USED</text>
+  <text x="756" y="36" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" letter-spacing="1.5" fill="var(--flag)">MAY NOT</text>
+
+  <rect x="96" y="96" width="644" height="30" fill="var(--pass-tint)" stroke="var(--pass)" stroke-width="1.2"/>
+  <rect x="740" y="96" width="244" height="30" fill="url(#lapsed)" stroke="var(--flag)" stroke-width="1.2"/>
+
+  <line x1="96" y1="68" x2="96" y2="126" stroke="var(--ink)" stroke-width="1.5"/>
+  <circle cx="96" cy="68" r="4.5" fill="var(--ink)"/>
+  <text x="92" y="58" font-family="Libre Franklin, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="600" fill="var(--ink)">Audit conducted</text>
+
+  <line x1="740" y1="68" x2="740" y2="126" stroke="var(--flag)" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <circle cx="740" cy="68" r="4.5" fill="var(--flag)"/>
+  <text x="740" y="58" text-anchor="middle" font-family="Libre Franklin, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="600" fill="var(--flag)">Audit lapses</text>
+
+  <line x1="96.0" y1="126" x2="96.0" y2="132" stroke="var(--slate-lt)" stroke-width="1"/>
+  <text x="96.0" y="147" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" fill="var(--slate-lt)">0 MO</text>
+  <line x1="257.0" y1="126" x2="257.0" y2="132" stroke="var(--slate-lt)" stroke-width="1"/>
+  <text x="257.0" y="147" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" fill="var(--slate-lt)">3 MO</text>
+  <line x1="418.0" y1="126" x2="418.0" y2="132" stroke="var(--slate-lt)" stroke-width="1"/>
+  <text x="418.0" y="147" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" fill="var(--slate-lt)">6 MO</text>
+  <line x1="579.0" y1="126" x2="579.0" y2="132" stroke="var(--slate-lt)" stroke-width="1"/>
+  <text x="579.0" y="147" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" fill="var(--slate-lt)">9 MO</text>
+  <line x1="740.0" y1="126" x2="740.0" y2="132" stroke="var(--slate-lt)" stroke-width="1"/>
+  <text x="740.0" y="147" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" fill="var(--slate-lt)">12 MO</text>
+  <text x="96" y="198" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" fill="var(--slate)">EVERY USE OF THE TOOL MUST FALL INSIDE THE SHADED WINDOW.</text>
+</svg>
+      <figcaption>The audit does not clear the tool permanently. It clears it for twelve months. Companies that commissioned an audit in the first compliance year and treated it as finished are the population the Comptroller&#39;s findings point at.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">Who this reaches</span>
+    <h2 class="section-title">Coverage follows the candidate, not the company.</h2>
+    <p class="section-intro">Your headquarters is not the test. If you post a remote role and one applicant lives in Staten Island, that evaluation is in scope. For anyone hiring remotely at any scale, the working assumption should be that you are covered until you have established otherwise in writing.</p>
+    <div class="cards">
+      <article class="card">
+        <h3>Employers</h3>
+        <p>Any company using a screening, ranking, assessment or promotion tool on candidates or employees located in New York City. Most exposure sits in the applicant tracking system or an assessment vendor the company assumed was manual.</p>
+      </article>
+      <article class="card">
+        <h3>Employment agencies</h3>
+        <p>The statute names employment agencies directly. If you screen candidates on behalf of a client using a tool that scores or ranks them, the obligation attaches to you and not only to the employer you place them with.</p>
+      </article>
+      <article class="card">
+        <h3>Staffing and RPO firms</h3>
+        <p>High-volume placement is where automated screening earns its keep, and where a single tool touches thousands of New York City candidates a year. Volume raises both the compliance obligation and the underlying discrimination exposure.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section tint">
+  <div class="wrap">
+    <span class="eyebrow">Choosing an auditor</span>
+    <h2 class="section-title">Six questions worth asking anyone who offers to audit your tool.</h2>
+    <p class="section-intro">DCWP publishes no approved auditor list. Selecting one is the employer&#39;s responsibility, and a report signed by a party that fails the independence test is worse than no report, because it documents that you tried and got it wrong. These six questions separate an audit from a PDF shaped like one.</p>
+    <ol class="q-list"><li><strong>Did you take any part in developing, testing, training or selling the tool you are being asked to audit?</strong></li>
+<li><strong>Who performs the disparate impact analysis, and what is their background?</strong></li>
+<li><strong>Will you publish your methodology, or only the results?</strong></li>
+<li><strong>Is any part of your fee tied to what the audit finds?</strong></li>
+<li><strong>If you also sell platform or governance software, how is the audit team separated from it?</strong></li>
+<li><strong>Will a named individual sign the audit summary as auditor of record?</strong></li></ol>
+    <a class="more" href="about.html#six">How Greenpoint answers all six &rarr;</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">Engagements</span>
+    <h2 class="section-title">Scoped and priced before the work starts.</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>Exposure review</h3>
+        <p>Inventory every tool touching hiring or promotion, apply the AEDT definition to each in writing, and produce a scoping memo you can hand to counsel. The right first step when you do not yet know whether you are covered.</p>
+        <div class="price">$1,500<span>Credited in full against a subsequent audit</span></div>
+      </article>
+      <article class="card">
+        <h3>Independent bias audit</h3>
+        <p>Impact ratio analysis by sex, by race and ethnicity, and by every required intersection. Published summary drafted, candidate notice reviewed, workpapers retained behind every figure.</p>
+        <div class="price">From $5,500<span>Scales with the number of tools in scope</span></div>
+      </article>
+      <article class="card">
+        <h3>AI governance baseline</h3>
+        <p>For organizations whose AI exposure runs past hiring. Enterprise inventory, risk classification against the NIST AI Risk Management Framework, control design and evidence practices.</p>
+        <div class="price">From $10,000<span>Scoped on assessment</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section tint">
+  <div class="wrap">
+    <span class="eyebrow">Common questions</span>
+    <h2 class="section-title">What employers ask before they commission anything.</h2>
+    <div class="qa">
+<details>
+<summary>Who has to comply with Local Law 144?</summary>
+<div class="answer"><p>Employers and employment agencies that use an automated employment decision tool to substantially assist or replace discretionary decision-making in hiring or promotion, where the candidate or employee is located in New York City. The test is where the candidate sits, not where the company is headquartered. A fully remote company with one applicant in the five boroughs is covered for that evaluation.</p></div>
+</details>
+<details>
+<summary>How often does the audit have to be done?</summary>
+<div class="answer"><p>The audit must have been conducted no more than one year before the tool is used. That makes it a recurring obligation rather than a one-time clearance, and it is the requirement employers most often miss after the first year.</p></div>
+</details>
+<details>
+<summary>What is the four-fifths rule?</summary>
+<div class="answer"><p>An impact ratio compares each demographic group's selection rate against the rate of the most-selected group. Under the EEOC's four-fifths guideline, a ratio below 0.80 is treated as evidence of adverse impact warranting further examination. Local Law 144 requires those ratios to be calculated and published. It does not itself make 0.80 a pass-fail line.</p></div>
+</details>
+<details>
+<summary>Is a failing impact ratio a violation?</summary>
+<div class="answer"><p>Not of Local Law 144. The statute requires you to calculate and publish, not to pass. The same figure is squarely relevant under Title VII, the New York City Human Rights Law and the New York State Human Rights Law, where the exposure is class litigation rather than a per-day penalty. Publishing a bad number is required. Not publishing it is the violation.</p></div>
+</details>
+<details>
+<summary>Who qualifies as an independent auditor?</summary>
+<div class="answer"><p>A person or firm not involved in using, developing or distributing the tool, and holding no employment or financial relationship with the employer that would compromise independence. DCWP maintains no approved auditor list, so the selection is the employer's responsibility and the employer's risk.</p></div>
+</details>
+<details>
+<summary>Can our AEDT vendor perform the audit?</summary>
+<div class="answer"><p>A vendor auditing its own tool, or paying the party that does, is the arrangement most likely to fail the independence requirement. It is also the most common one in the market. Ask the six questions on this page of anyone you are considering.</p></div>
+</details>
+<details>
+<summary>What has to be published, and for how long?</summary>
+<div class="answer"><p>A summary of the most recent bias audit, publicly available on your website, covering the source and explanation of the data used, the number of individuals assessed who fall into unknown categories, and the selection or scoring rates and impact ratios for every required category. The distribution date of the tool goes alongside it. The summary must stay posted for at least six months after the tool's most recent use.</p></div>
+</details>
+<details>
+<summary>What are the penalties?</summary>
+<div class="answer"><p>Between $500 and $1,500 per violation, and each day a violation continues is treated as a separate violation. Failing to conduct the audit, failing to publish the summary and failing to give notice are each independently actionable.</p></div>
+</details>
+<details>
+<summary>What if we have never collected demographic data?</summary>
+<div class="answer"><p>The rules address this. Where historical data is insufficient, test data may be substituted, and that substitution carries its own disclosure requirement. Reconstructing or substituting data is one of the main things that moves the cost of an engagement.</p></div>
+</details>
+<details>
+<summary>We are not sure any of our tools count as AEDTs. Where do we start?</summary>
+<div class="answer"><p>With an inventory rather than an audit. Every system touching hiring, screening, ranking, assessment or promotion gets the AEDT definition applied to it in writing. That is what the exposure review produces, and roughly a third of them conclude that nothing in the stack meets the definition.</p></div>
+</details>
+</div>
+  </div>
+</section>
+
+<section class="cta-band"><div class="wrap">
+<h2>Find out whether you are covered before somebody else does.</h2>
+<p>A twenty-minute scoping call is free and usually settles the question. If you are not in scope, we will tell you that and we are done.</p>
+<a class="btn btn-solid" href="mailto:hello@greenpointcompliance.com">hello@greenpointcompliance.com</a>
+</div></section>
+
+</main>
+<footer class="site-foot"><div class="wrap">
+<div><p><strong>Greenpoint AI Compliance LLC</strong><br>418 Broadway, Ste R<br>Albany, NY 12207</p>
+<p><a href="nyc-local-law-144-bias-audit-guide.html">Guide</a> &middot; <a href="four-fifths-rule-calculator.html">Calculator</a> &middot; <a href="services.html">Services</a> &middot; <a href="about.html">About</a> &middot; <a href="legal.html">Legal &amp; Privacy</a></p></div>
+<p class="disclaimer">Greenpoint AI Compliance LLC provides regulatory consulting and independent assessment services. Nothing on this site is legal advice, and no attorney&ndash;client relationship is created by using it or by contacting us. See <a href="legal.html">Legal &amp; Privacy</a>.</p>
+</div></footer>
+<script>
+(function () {
+  var rows = document.querySelectorAll('#rows tr');
+  var note = document.getElementById('verdict-note');
+  function compute() {
+    var data = [];
+    rows.forEach(function (tr) {
+      var i = tr.querySelectorAll('input');
+      var sel = parseFloat(i[0].value), app = parseFloat(i[1].value);
+      data.push({ tr: tr, rate: (isFinite(sel) && isFinite(app) && app > 0) ? sel / app : null });
+    });
+    var best = 0;
+    data.forEach(function (d) { if (d.rate !== null && d.rate > best) best = d.rate; });
+    var anyFail = false;
+    data.forEach(function (d) {
+      var rc = d.tr.querySelector('.rate'), ic = d.tr.querySelector('.ratio'), fc = d.tr.querySelector('.flagcell');
+      if (d.rate === null || best === 0) { rc.textContent = '\u2014'; ic.textContent = '\u2014'; fc.innerHTML = ''; return; }
+      var ratio = d.rate / best;
+      rc.textContent = (d.rate * 100).toFixed(1) + '%';
+      ic.textContent = ratio.toFixed(2);
+      var fails = ratio < 0.8;
+      if (fails) anyFail = true;
+      fc.innerHTML = '<span class="verdict ' + (fails ? 'fail' : 'pass') + '">' + (fails ? 'Below 0.80' : 'Clears') + '</span>';
+      ic.style.color = fails ? 'var(--flag)' : 'var(--ink)';
+    });
+    note.innerHTML = anyFail
+      ? '<strong style="color:var(--flag)">At least one group falls below 0.80.</strong> Under the EEOC four-fifths guideline that is evidence of adverse impact warranting scrutiny. Local Law 144 requires you to calculate and publish these ratios. It does not let you withhold them because they look bad.'
+      : '<strong>Impact ratio</strong> = each group\'s selection rate divided by the highest group\'s rate. Under the EEOC four-fifths guideline, below <strong>0.80</strong> is treated as evidence of adverse impact.';
+  }
+  document.querySelectorAll('#rows input').forEach(function (i) { i.addEventListener('input', compute); });
+  compute();
+})();
+</script>
+</body>
+</html>
